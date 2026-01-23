@@ -1,0 +1,732 @@
+[
+  {
+    "id": "prod-001",
+    "subCategoryId": "subcat-006",
+    "name": "iPhone 17 Pro Max",
+    "price": 1199.99,
+    "description": "The ultimate flagship with a 6.9-inch display, A19 Pro chip, and the longest 8x optical zoom ever on iPhone.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/iphone-17-pm.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-002",
+    "subCategoryId": "subcat-006",
+    "name": "iPhone 17 Pro",
+    "price": 1099.99,
+    "description": "New aluminum unibody design with vapor chamber cooling and the powerful 48MP Fusion camera system.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/iphone-17-pro.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-003",
+    "subCategoryId": "subcat-006",
+    "name": "iPhone 15",
+    "price": 699.99,
+    "description": "The reliable classic featuring Dynamic Island, a 48MP Main camera, and universal USB-C charging.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/iphone-15.png",
+    "rating": 4.7
+  },
+  {
+    "id": "prod-004",
+    "subCategoryId": "subcat-006",
+    "name": "iPhone 14 Plus",
+    "price": 599.00,
+    "description": "Big screen and big battery life for those who want a larger display without the Pro price tag.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/iphone-14-plus.png",
+    "rating": 4.6
+  },
+  {
+    "id": "prod-005",
+    "subCategoryId": "subcat-006",
+    "name": "iPhone 13 Mini",
+    "price": 499.00,
+    "description": "The final compact powerhouse for fans of one-handed use, now at a great legacy value.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/iphone-13-mini.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-006",
+    "subCategoryId": "subcat-006",
+    "name": "iPhone SE (3rd Gen)",
+    "price": 379.00,
+    "description": "The most affordable entry into iOS with the familiar home button and fast A15 Bionic performance.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/iphone-se.png",
+    "rating": 4.4
+  },
+  {
+    "id": "prod-007",
+    "subCategoryId": "subcat-010",
+    "name": "MagSafe Silicone Case",
+    "price": 49.00,
+    "description": "Silky, soft-touch finish with built-in magnets for fast wireless charging.",
+    "category": "Accessories",
+    "image": "../assets/images/products/magsafe-case.png",
+    "rating": 4.5
+  },
+  {
+    "id": "prod-008",
+    "subCategoryId": "subcat-010",
+    "name": "20W USB-C Power Adapter",
+    "price": 19.00,
+    "description": "Fast, efficient charging at home, in the office, or on the go.",
+    "category": "Accessories",
+    "image": "../assets/images/products/power-adapter.png",
+    "rating": 4.3
+  },
+  {
+    "id": "prod-009",
+    "subCategoryId": "subcat-010",
+    "name": "MagSafe Wallet",
+    "price": 59.00,
+    "description": "Crafted from specially tanned European leather with built-in Find My support.",
+    "category": "Accessories",
+    "image": "../assets/images/products/magsafe-wallet.png",
+    "rating": 4.6
+  },
+  {
+    "id": "prod-010",
+    "subCategoryId": "subcat-010",
+    "name": "Clear Case with MagSafe",
+    "price": 49.00,
+    "description": "Thin, light, and easy to grip — this case shows off the brilliant finish of iPhone.",
+    "category": "Accessories",
+    "image": "../assets/images/products/clear-case.png",
+    "rating": 4.2
+  },
+  {
+    "id": "prod-011",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy S24 Ultra",
+    "price": 1299.99,
+    "description": "Titanium frame, built-in S Pen, and the most advanced AI-powered camera system.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/s24-ultra.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-012",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy Z Fold5",
+    "price": 1799.99,
+    "description": "Massive 7.6\" main display that folds into a pocketable smartphone.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/z-fold-5.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-013",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy S24+",
+    "price": 999.99,
+    "description": "Stunning QHD+ display and all-day battery life with Galaxy AI features.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/s24-plus.png",
+    "rating": 4.7
+  },
+  {
+    "id": "prod-014",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy Z Flip5",
+    "price": 999.99,
+    "description": "Pocket-sized personality with a large cover screen for quick notifications.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/z-flip-5.png",
+    "rating": 4.6
+  },
+  {
+    "id": "prod-015",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy S24",
+    "price": 799.99,
+    "description": "The compact flagship with a 50MP camera and pro-grade photo editing AI.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/s24.png",
+    "rating": 4.6
+  },
+  {
+    "id": "prod-016",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy A54 5G",
+    "price": 449.99,
+    "description": "Awesome screen, awesome camera, and long-lasting battery life.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/a54.png",
+    "rating": 4.5
+  },
+  {
+    "id": "prod-017",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy A34",
+    "price": 349.00,
+    "description": "Bright and clear viewing even in sunlight with a 120Hz AMOLED display.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/a34.png",
+    "rating": 4.3
+  },
+  {
+    "id": "prod-018",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy S23 FE",
+    "price": 599.99,
+    "description": "The Fan Edition brings flagship features to a more accessible price point.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/s23-fe.png",
+    "rating": 4.4
+  },
+  {
+    "id": "prod-019",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy A15",
+    "price": 199.99,
+    "description": "Super AMOLED display and 50MP main camera for everyday essentials.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/a15.png",
+    "rating": 4.1
+  },
+  {
+    "id": "prod-020",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy A25 5G",
+    "price": 299.99,
+    "description": "Vivid visual experience with an expansive 6.5-inch display.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/a25.png",
+    "rating": 4.2
+  },
+  {
+    "id": "prod-021",
+    "subCategoryId": "subcat-010",
+    "name": "45W USB-C Fast Charger",
+    "price": 34.99,
+    "description": "Super Fast Charging 2.0 to get your Galaxy back to 100% in minutes.",
+    "category": "Accessories",
+    "image": "../assets/images/products/samsung-charger.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-022",
+    "subCategoryId": "subcat-010",
+    "name": "Galaxy S24 Ultra S Pen",
+    "price": 49.99,
+    "description": "Official replacement stylus for precise writing and air gestures.",
+    "category": "Accessories",
+    "image": "../assets/images/products/s-pen.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-023",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy M54",
+    "price": 399.00,
+    "description": "Massive 6000mAh battery for power users who never want to plug in.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/m54.png",
+    "rating": 4.4
+  },
+  {
+    "id": "prod-024",
+    "subCategoryId": "subcat-010",
+    "name": "Galaxy Buds2 Pro",
+    "price": 229.99,
+    "description": "Studio-quality sound and Intelligent Active Noise Cancellation.",
+    "category": "Accessories",
+    "image": "../assets/images/products/buds-2-pro.png",
+    "rating": 4.7
+  },
+  {
+    "id": "prod-025",
+    "subCategoryId": "subcat-007",
+    "name": "Samsung Galaxy S22 Refurbished",
+    "price": 349.99,
+    "description": "Sustainable choice with high-end performance at a fraction of the cost.",
+    "category": "Smartphones",
+    "image": "../assets/images/products/s22-refurb.png",
+    "rating": 4.0
+  },
+  {
+    "id": "prod-026",
+    "subCategoryId": "subcat-008",
+    "name": "iPad Pro 12.9-inch (M2)",
+    "price": 1099.00,
+    "description": "Brilliant Liquid Retina XDR display and the incredible M2 chip performance.",
+    "category": "Tablets",
+    "image": "../assets/images/products/ipad-pro-12.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-027",
+    "subCategoryId": "subcat-008",
+    "name": "iPad Air (5th Gen)",
+    "price": 599.00,
+    "description": "Turbocharged by the Apple M1 chip. 12MP Ultra Wide front camera with Center Stage.",
+    "category": "Tablets",
+    "image": "../assets/images/products/ipad-air.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-028",
+    "subCategoryId": "subcat-008",
+    "name": "iPad Mini (6th Gen)",
+    "price": 499.00,
+    "description": "Mega power in a mini size. All-screen design with an 8.3-inch Liquid Retina display.",
+    "category": "Tablets",
+    "image": "../assets/images/products/ipad-mini.png",
+    "rating": 4.7
+  },
+  {
+    "id": "prod-029",
+    "subCategoryId": "subcat-008",
+    "name": "iPad (10th Gen)",
+    "price": 449.00,
+    "description": "Colorfully reimagined for versatility. 10.9-inch Liquid Retina display.",
+    "category": "Tablets",
+    "image": "../assets/images/products/ipad-10.png",
+    "rating": 4.6
+  },
+  {
+    "id": "prod-030",
+    "subCategoryId": "subcat-008",
+    "name": "iPad Pro 11-inch (M2)",
+    "price": 799.00,
+    "description": "The ultimate iPad experience in a more portable 11-inch form factor.",
+    "category": "Tablets",
+    "image": "../assets/images/products/ipad-pro-11.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-031",
+    "subCategoryId": "subcat-009",
+    "name": "Samsung Galaxy Tab S9 Ultra",
+    "price": 1199.99,
+    "description": "Our largest, most powerful Android tablet with IP68 water and dust resistance.",
+    "category": "Tablets",
+    "image": "../assets/images/products/tab-s9-ultra.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-032",
+    "subCategoryId": "subcat-009",
+    "name": "Samsung Galaxy Tab S9 FE",
+    "price": 449.99,
+    "description": "The Fan Edition experience with an included S Pen and vibrant 90Hz display.",
+    "category": "Tablets",
+    "image": "../assets/images/products/tab-s9-fe.png",
+    "rating": 4.5
+  },
+  {
+    "id": "prod-033",
+    "subCategoryId": "subcat-009",
+    "name": "Samsung Galaxy Tab A9+",
+    "price": 269.99,
+    "description": "A stylish and affordable tablet with a smooth 90Hz refresh rate and quad speakers.",
+    "category": "Tablets",
+    "image": "../assets/images/products/tab-a9-plus.png",
+    "rating": 4.3
+  },
+  {
+    "id": "prod-034",
+    "subCategoryId": "subcat-009",
+    "name": "Samsung Galaxy Tab S8",
+    "price": 629.99,
+    "description": "Flagship performance and multitasking capabilities at a great value.",
+    "category": "Tablets",
+    "image": "../assets/images/products/tab-s8.png",
+    "rating": 4.6
+  },
+  {
+    "id": "prod-035",
+    "subCategoryId": "subcat-009",
+    "name": "Samsung Galaxy Tab A8",
+    "price": 229.00,
+    "description": "The perfect family tablet for streaming, learning, and casual gaming.",
+    "category": "Tablets",
+    "image": "../assets/images/products/tab-a8.png",
+    "rating": 4.2
+  },
+  {
+    "id": "prod-036",
+    "subCategoryId": "subcat-010",
+    "name": "Anker 737 Power Bank (PowerCore 24K)",
+    "price": 149.99,
+    "description": "Ultra-powerful 140W two-way charging with a smart digital display.",
+    "category": "Accessories",
+    "image": "../assets/images/products/anker-737.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-037",
+    "subCategoryId": "subcat-010",
+    "name": "Belkin BoostCharge 20K",
+    "price": 49.99,
+    "description": "High-capacity power bank with 3 ports to charge multiple devices at once.",
+    "category": "Accessories",
+    "image": "../assets/images/products/belkin-20k.png",
+    "rating": 4.5
+  },
+  {
+    "id": "prod-038",
+    "subCategoryId": "subcat-010",
+    "name": "Samsung 25W Battery Pack",
+    "price": 34.99,
+    "description": "Slim, lightweight design with 10,000mAh and Super Fast Charging support.",
+    "category": "Accessories",
+    "image": "../assets/images/products/samsung-25w-bank.png",
+    "rating": 4.4
+  },
+  {
+    "id": "prod-039",
+    "subCategoryId": "subcat-010",
+    "name": "Apple MagSafe Battery Pack",
+    "price": 99.00,
+    "description": "Attaches with a click. Its compact design makes on-the-go charging easy.",
+    "category": "Accessories",
+    "image": "../assets/images/products/magsafe-bank.png",
+    "rating": 4.1
+  },
+  {
+    "id": "prod-040",
+    "subCategoryId": "subcat-010",
+    "name": "Baseus 65W Power Bank",
+    "price": 59.99,
+    "description": "Fast charging for laptops and phones with a large 20,000mAh capacity.",
+    "category": "Accessories",
+    "image": "../assets/images/products/baseus-65w.png",
+    "rating": 4.6
+  },
+  {
+    "id": "prod-041",
+    "subCategoryId": "subcat-011",
+    "name": "Canon EOS 90D",
+    "price": 1199.00,
+    "description": "High-speed continuous shooting and stunning 4K video for sports and wildlife.",
+    "category": "Cameras",
+    "image": "../assets/images/products/canon-90d.png",
+    "rating": 4.7
+  },
+  {
+    "id": "prod-042",
+    "subCategoryId": "subcat-011",
+    "name": "Nikon D850",
+    "price": 2796.00,
+    "description": "Extreme resolution meets extreme speed. A pro-grade full-frame DSLR powerhouse.",
+    "category": "Cameras",
+    "image": "../assets/images/products/nikon-d850.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-043",
+    "subCategoryId": "subcat-011",
+    "name": "Canon EOS Rebel T7",
+    "price": 479.00,
+    "description": "Perfect for beginners. Sleek DSLR with a 24.1MP sensor and built-in Wi-Fi.",
+    "category": "Cameras",
+    "image": "../assets/images/products/canon-t7.png",
+    "rating": 4.5
+  },
+  {
+    "id": "prod-044",
+    "subCategoryId": "subcat-011",
+    "name": "Nikon D780",
+    "price": 2296.00,
+    "description": "Versatile full-frame DSLR with advanced movie features and low-light performance.",
+    "category": "Cameras",
+    "image": "../assets/images/products/nikon-d780.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-045",
+    "subCategoryId": "subcat-011",
+    "name": "Pentax K-3 Mark III",
+    "price": 1696.00,
+    "description": "Rugged, weather-sealed DSLR with an exceptionally bright optical viewfinder.",
+    "category": "Cameras",
+    "image": "../assets/images/products/pentax-k3.png",
+    "rating": 4.4
+  },
+  {
+    "id": "prod-046",
+    "subCategoryId": "subcat-012",
+    "name": "Sony Alpha a7 IV",
+    "price": 2498.00,
+    "description": "The perfect hybrid mirrorless camera for both professional photos and 4K video.",
+    "category": "Cameras",
+    "image": "../assets/images/products/sony-a7iv.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-047",
+    "subCategoryId": "subcat-012",
+    "name": "Fujifilm X-T5",
+    "price": 1699.00,
+    "description": "Retro design meets modern tech. 40MP sensor with classic dial controls.",
+    "category": "Cameras",
+    "image": "../assets/images/products/fuji-xt5.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-048",
+    "subCategoryId": "subcat-012",
+    "name": "Panasonic Lumix S5 II",
+    "price": 1997.00,
+    "description": "Advanced phase hybrid autofocus and active I.S. for incredible video stability.",
+    "category": "Cameras",
+    "image": "../assets/images/products/lumix-s5ii.png",
+    "rating": 4.7
+  },
+  {
+    "id": "prod-049",
+    "subCategoryId": "subcat-012",
+    "name": "Sony ZV-E10",
+    "price": 698.00,
+    "description": "Interchangeable lens mirrorless camera designed specifically for vlogging.",
+    "category": "Cameras",
+    "image": "../assets/images/products/sony-zve10.png",
+    "rating": 4.6
+  },
+  {
+    "id": "prod-050",
+    "subCategoryId": "subcat-012",
+    "name": "Nikon Z6 II",
+    "price": 1996.00,
+    "description": "Dual processors and dual card slots for high-speed, reliable mirrorless shooting.",
+    "category": "Cameras",
+    "image": "../assets/images/products/nikon-z6ii.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-051",
+    "subCategoryId": "subcat-013",
+    "name": "Sony FE 24-70mm f/2.8 GM II",
+    "price": 2298.00,
+    "description": "The gold standard for standard zoom lenses. Sharp, fast, and lightweight.",
+    "category": "Lenses",
+    "image": "../assets/images/products/sony-2470.png",
+    "rating": 5.0
+  },
+  {
+    "id": "prod-052",
+    "subCategoryId": "subcat-013",
+    "name": "Canon RF 50mm f/1.8 STM",
+    "price": 199.00,
+    "description": "Compact, affordable 'nifty fifty' prime lens for beautiful portraits.",
+    "category": "Lenses",
+    "image": "../assets/images/products/canon-50mm.png",
+    "rating": 4.7
+  },
+  {
+    "id": "prod-053",
+    "subCategoryId": "subcat-013",
+    "name": "Sigma 18-35mm f/1.8 DC HSM",
+    "price": 699.00,
+    "description": "The first wide-angle to standard zoom lens to achieve a large f/1.8 aperture.",
+    "category": "Lenses",
+    "image": "../assets/images/products/sigma-1835.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-054",
+    "subCategoryId": "subcat-013",
+    "name": "Tamron 70-180mm f/2.8 Di III",
+    "price": 1199.00,
+    "description": "Compact and fast telephoto zoom for full-frame mirrorless cameras.",
+    "category": "Lenses",
+    "image": "../assets/images/products/tamron-70180.png",
+    "rating": 4.6
+  },
+  {
+    "id": "prod-055",
+    "subCategoryId": "subcat-013",
+    "name": "Nikon NIKKOR Z 85mm f/1.8 S",
+    "price": 796.00,
+    "description": "Breathtaking realism and bokeh. A premier portrait lens for the Z system.",
+    "category": "Lenses",
+    "image": "../assets/images/products/nikon-85mm.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-056",
+    "subCategoryId": "subcat-014",
+    "name": "GoPro HERO12 Black",
+    "price": 399.00,
+    "description": "Incredible image quality, better HyperSmooth video stabilization, and massive battery.",
+    "category": "Cameras",
+    "image": "../assets/images/products/gopro-12.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-057",
+    "subCategoryId": "subcat-014",
+    "name": "DJI Osmo Action 4",
+    "price": 299.00,
+    "description": "Large 1/1.3-inch sensor for stunning low-light performance and color depth.",
+    "category": "Cameras",
+    "image": "../assets/images/products/dji-action-4.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-058",
+    "subCategoryId": "subcat-014",
+    "name": "Insta360 X3",
+    "price": 449.00,
+    "description": "360-degree capture with AI-powered reframing software for creative shots.",
+    "category": "Cameras",
+    "image": "../assets/images/products/insta360-x3.png",
+    "rating": 4.7
+  },
+  {
+    "id": "prod-059",
+    "subCategoryId": "subcat-014",
+    "name": "Akaso Brave 7 LE",
+    "price": 149.00,
+    "description": "All-weather action camera with a front-facing screen for selfie vlogging.",
+    "category": "Cameras",
+    "image": "../assets/images/products/akaso-brave.png",
+    "rating": 4.3
+  },
+  {
+    "id": "prod-060",
+    "subCategoryId": "subcat-014",
+    "name": "GoPro HERO11 Black Mini",
+    "price": 249.00,
+    "description": "The same high-end video of HERO11 in a smaller, lighter, tougher design.",
+    "category": "Cameras",
+    "image": "../assets/images/products/gopro-11-mini.png",
+    "rating": 4.5
+  },
+  {
+    "id": "prod-061",
+    "subCategoryId": "subcat-015",
+    "name": "Manfrotto MT055CXPRO4 Carbon Fiber",
+    "price": 499.00,
+    "description": "Pro-grade stability and lightness. Features a 90-degree center column mechanism.",
+    "category": "Accessories",
+    "image": "../assets/images/products/manfrotto-tripod.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-062",
+    "subCategoryId": "subcat-015",
+    "name": "Joby GorillaPod 3K Kit",
+    "price": 54.00,
+    "description": "Flexible legs allow you to secure pro camera equipment to virtually any surface.",
+    "category": "Accessories",
+    "image": "../assets/images/products/gorillapod-3k.png",
+    "rating": 4.6
+  },
+  {
+    "id": "prod-063",
+    "subCategoryId": "subcat-015",
+    "name": "Peak Design Travel Tripod (Aluminum)",
+    "price": 379.00,
+    "description": "The most portable professional tripod ever made. Packs down to the diameter of a water bottle.",
+    "category": "Accessories",
+    "image": "../assets/images/products/pd-tripod.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-064",
+    "subCategoryId": "subcat-015",
+    "name": "Vanguard Alta Pro 263AB",
+    "price": 169.00,
+    "description": "Aluminum tripod with a multi-angle center column for macro photography.",
+    "category": "Accessories",
+    "image": "../assets/images/products/vanguard-tripod.png",
+    "rating": 4.5
+  },
+  {
+    "id": "prod-065",
+    "subCategoryId": "subcat-015",
+    "name": "SmallRig Lightweight Tripod",
+    "price": 69.00,
+    "description": "Compact and sturdy aluminum tripod perfect for travel and mirrorless setups.",
+    "category": "Accessories",
+    "image": "../assets/images/products/smallrig-tripod.png",
+    "rating": 4.4
+  },
+  {
+    "id": "prod-066",
+    "subCategoryId": "subcat-016",
+    "name": "Sony WH-1000XM5",
+    "price": 398.00,
+    "description": "Industry-leading noise cancellation and 30-hour battery life.",
+    "category": "Audio",
+    "image": "../assets/images/products/sony-xm5.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-067",
+    "subCategoryId": "subcat-016",
+    "name": "Budget Over-Ear G1",
+    "price": 24.99,
+    "description": "Affordable wired headphones. Users report thin plastic and muffled sound.",
+    "category": "Audio",
+    "image": "../assets/images/products/budget-head.png",
+    "rating": 2.4
+  },
+  {
+    "id": "prod-071",
+    "subCategoryId": "subcat-017",
+    "name": "JBL Flip 6",
+    "price": 129.95,
+    "description": "Bold sound for every adventure with IP67 waterproof and dustproof design.",
+    "category": "Audio",
+    "image": "../assets/images/products/jbl-flip-6.png",
+    "rating": 4.7
+  },
+  {
+    "id": "prod-072",
+    "subCategoryId": "subcat-017",
+    "name": "Generic Mini Speaker",
+    "price": 15.00,
+    "description": "Ultra-portable but connectivity is unstable. Audio distorts at 50% volume.",
+    "category": "Audio",
+    "image": "../assets/images/products/mini-speak.png",
+    "rating": 2.1
+  },
+  {
+    "id": "prod-076",
+    "subCategoryId": "subcat-018",
+    "name": "Samsung HW-Q990D",
+    "price": 1697.99,
+    "description": "Ultimate 11.1.4 Ch. Dolby Atmos sound for a true cinema experience.",
+    "category": "Audio",
+    "image": "../assets/images/products/samsung-q990.png",
+    "rating": 4.9
+  },
+  {
+    "id": "prod-077",
+    "subCategoryId": "subcat-018",
+    "name": "OldGen Surround Pack",
+    "price": 199.00,
+    "description": "Bulky setup with complex wiring. Lacks modern HDMI eARC support.",
+    "category": "Audio",
+    "image": "../assets/images/products/old-surround.png",
+    "rating": 3.2
+  },
+  {
+    "id": "prod-081",
+    "subCategoryId": "subcat-019",
+    "name": "Sonos Arc Ultra",
+    "price": 899.00,
+    "description": "Premium smart soundbar for TV, movies, music, and gaming.",
+    "category": "Audio",
+    "image": "../assets/images/products/sonos-arc.png",
+    "rating": 4.8
+  },
+  {
+    "id": "prod-082",
+    "subCategoryId": "subcat-019",
+    "name": "Slim Soundbar Lite",
+    "price": 45.00,
+    "description": "Small footprint but lacks bass. Remote often fails to sync with TV.",
+    "category": "Audio",
+    "image": "../assets/images/products/slim-bar.png",
+    "rating": 2.9
+  }
+]

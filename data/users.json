@@ -1,0 +1,311 @@
+[
+  {
+    "id": "user-001",
+    "name": "Amr Elmaghraby",
+    "email": "amrr.ayman36@gmail.com",
+    "password": "hashed_password",
+    "role": "admin",
+    "avatar": "../assets/users/user-001.png",
+    "phone": "0123456789",
+    "wishlist": ["prod-001", "prod-002", "prod-003"],
+    "createdAt": "2023-06-01T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-001",
+        "type": "home",
+        "street": "Street 1",
+        "city": "Damanhour",
+        "zipcode": "12345",
+        "country": "Egypt",
+        "isDefault": true
+      },
+      {
+        "id": "addr-002",
+        "type": "work",
+        "street": "Street 2",
+        "city": "Cairo",
+        "zipcode": "12345",
+        "country": "Egypt",
+        "isDefault": false
+      }
+    ]
+  },
+  {
+    "id": "user-002",
+    "name": "Ahmed Omar",
+    "email": "ahmed.omar@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-002.png",
+    "phone": "0100000001",
+    "wishlist": ["prod-001", "prod-002"],
+    "createdAt": "2023-06-02T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-003",
+        "type": "home",
+        "street": "Street 3",
+        "city": "Cairo",
+        "zipcode": "23456",
+        "country": "Egypt",
+        "isDefault": true
+      }
+    ]
+  },
+  {
+    "id": "user-003",
+    "name": "Ahmed Kamal",
+    "email": "ahmed.kamal@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-003.png",
+    "phone": "0100000002",
+    "wishlist": ["prod-003"],
+    "createdAt": "2023-06-03T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-004",
+        "type": "home",
+        "street": "Street 4",
+        "city": "Alexandria",
+        "zipcode": "34567",
+        "country": "Egypt",
+        "isDefault": true
+      },
+      {
+        "id": "addr-005",
+        "type": "work",
+        "street": "Street 5",
+        "city": "Cairo",
+        "zipcode": "34567",
+        "country": "Egypt",
+        "isDefault": false
+      }
+    ]
+  },
+  {
+    "id": "user-004",
+    "name": "Ahmed Ghanem",
+    "email": "ahmed.ghanem@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-004.png",
+    "phone": "0100000003",
+    "wishlist": [],
+    "createdAt": "2023-06-04T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-006",
+        "type": "home",
+        "street": "Street 6",
+        "city": "Giza",
+        "zipcode": "45678",
+        "country": "Egypt",
+        "isDefault": true
+      }
+    ]
+  },
+  {
+    "id": "user-005",
+    "name": "Adham Sakoury",
+    "email": "adham.sakoury@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-005.png",
+    "phone": "0100000004",
+    "wishlist": ["prod-004"],
+    "createdAt": "2023-06-05T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-007",
+        "type": "home",
+        "street": "Street 7",
+        "city": "Cairo",
+        "zipcode": "56789",
+        "country": "Egypt",
+        "isDefault": true
+      },
+      {
+        "id": "addr-008",
+        "type": "work",
+        "street": "Street 8",
+        "city": "New Cairo",
+        "zipcode": "56789",
+        "country": "Egypt",
+        "isDefault": false
+      }
+    ]
+  },
+  {
+    "id": "user-006",
+    "name": "Amr Tarek",
+    "email": "amr.tarek@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-006.png",
+    "phone": "0100000005",
+    "wishlist": ["prod-002", "prod-005"],
+    "createdAt": "2023-06-06T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-009",
+        "type": "home",
+        "street": "Street 9",
+        "city": "Mansoura",
+        "zipcode": "67890",
+        "country": "Egypt",
+        "isDefault": true
+      }
+    ]
+  },
+  {
+    "id": "user-007",
+    "name": "Ahmed Fouda",
+    "email": "ahmed.fouda@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-007.png",
+    "phone": "0100000006",
+    "wishlist": [],
+    "createdAt": "2023-06-07T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-010",
+        "type": "home",
+        "street": "Street 10",
+        "city": "Tanta",
+        "zipcode": "78901",
+        "country": "Egypt",
+        "isDefault": true
+      }
+    ]
+  },
+  {
+    "id": "user-008",
+    "name": "Mohamed Salah",
+    "email": "mohamed.salah@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-008.png",
+    "phone": "0100000007",
+    "wishlist": ["prod-001"],
+    "createdAt": "2023-06-08T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-011",
+        "type": "home",
+        "street": "Street 11",
+        "city": "Zagazig",
+        "zipcode": "89012",
+        "country": "Egypt",
+        "isDefault": true
+      }
+    ]
+  },
+  {
+    "id": "user-009",
+    "name": "Omar Hassan",
+    "email": "omar.hassan@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-009.png",
+    "phone": "0100000008",
+    "wishlist": [],
+    "createdAt": "2023-06-09T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-012",
+        "type": "home",
+        "street": "Street 12",
+        "city": "Ismailia",
+        "zipcode": "90123",
+        "country": "Egypt",
+        "isDefault": true
+      },
+      {
+        "id": "addr-013",
+        "type": "work",
+        "street": "Street 13",
+        "city": "Cairo",
+        "zipcode": "90123",
+        "country": "Egypt",
+        "isDefault": false
+      }
+    ]
+  },
+  {
+    "id": "user-010",
+    "name": "Youssef Adel",
+    "email": "youssef.adel@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-010.png",
+    "phone": "0100000009",
+    "wishlist": ["prod-003", "prod-006"],
+    "createdAt": "2023-06-10T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-014",
+        "type": "home",
+        "street": "Street 14",
+        "city": "Aswan",
+        "zipcode": "01234",
+        "country": "Egypt",
+        "isDefault": true
+      }
+    ]
+  },
+  {
+    "id": "user-011",
+    "name": "Kareem Nabil",
+    "email": "kareem.nabil@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-011.png",
+    "phone": "0100000010",
+    "wishlist": [],
+    "createdAt": "2023-06-11T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-015",
+        "type": "home",
+        "street": "Street 15",
+        "city": "Suez",
+        "zipcode": "11223",
+        "country": "Egypt",
+        "isDefault": true
+      },
+      {
+        "id": "addr-016",
+        "type": "work",
+        "street": "Street 16",
+        "city": "Port Said",
+        "zipcode": "11223",
+        "country": "Egypt",
+        "isDefault": false
+      }
+    ]
+  },
+  {
+    "id": "user-012",
+    "name": "Hassan Mostafa",
+    "email": "hassan.mostafa@gmail.com",
+    "password": "hashed_password",
+    "role": "user",
+    "avatar": "../assets/users/user-012.png",
+    "phone": "0100000011",
+    "wishlist": ["prod-002"],
+    "createdAt": "2023-06-12T10:00:00Z",
+    "address": [
+      {
+        "id": "addr-017",
+        "type": "home",
+        "street": "Street 17",
+        "city": "Minya",
+        "zipcode": "22334",
+        "country": "Egypt",
+        "isDefault": true
+      }
+    ]
+  }
+]
