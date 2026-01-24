@@ -1,199 +1,175 @@
-[
-  {
-    "id": "subcat-001",
-    "categoryId": "cat-001",
-    "name": "Gaming Laptops",
-    "slug": "gaming-laptops"
-  },
-  {
-    "id": "subcat-002",
-    "categoryId": "cat-001",
-    "name": "Business Laptops",
-    "slug": "business-laptops"
-  },
-  {
-    "id": "subcat-003",
-    "categoryId": "cat-001",
-    "name": "Desktops",
-    "slug": "desktops"
-  },
-  {
-    "id": "subcat-004",
-    "categoryId": "cat-001",
-    "name": "Monitors",
-    "slug": "monitors"
-  },
-  {
-    "id": "subcat-005",
-    "categoryId": "cat-001",
-    "name": "Accessories",
-    "slug": "pc-accessories"
-  },
-
-  {
-    "id": "subcat-006",
-    "categoryId": "cat-002",
-    "name": "iPhones",
-    "slug": "iphones"
-  },
-  {
-    "id": "subcat-007",
-    "categoryId": "cat-002",
-    "name": "Android Phones",
-    "slug": "android-phones"
-  },
-  {
-    "id": "subcat-008",
-    "categoryId": "cat-002",
-    "name": "iPads",
-    "slug": "ipads"
-  },
-  {
-    "id": "subcat-009",
-    "categoryId": "cat-002",
-    "name": "Tablets",
-    "slug": "tablets"
-  },
-  {
-    "id": "subcat-010",
-    "categoryId": "cat-002",
-    "name": "Cases & Chargers & Power Banks",
-    "slug": "mobile-accessories"
-  },
-
-  {
-    "id": "subcat-011",
-    "categoryId": "cat-003",
-    "name": "DSLR",
-    "slug": "dslr-cameras"
-  },
-  {
-    "id": 302,
-    "categoryId": "cat-003",
-    "name": "Mirrorless",
-    "slug": "mirrorless-cameras"
-  },
-  {
-    "id": "subcat-012",
-    "categoryId": "cat-003",
-    "name": "Lenses",
-    "slug": "camera-lenses"
-  },
-  {
-    "id": "subcat-013",
-    "categoryId": "cat-003",
-    "name": "Action Cameras",
-    "slug": "action-cameras"
-  },
-  {
-    "id": "subcat-014",
-    "categoryId": "cat-003",
-    "name": "Tripods",
-    "slug": "tripods"
-  },
-
-  {
-    "id": "subcat-015",
-    "categoryId": "cat-004",
-    "name": "Headphones",
-    "slug": "headphones"
-  },
-  {
-    "id": "subcat-016",
-    "categoryId": "cat-004",
-    "name": "Bluetooth Speakers",
-    "slug": "bluetooth-speakers"
-  },
-  {
-    "id": "subcat-017",
-    "categoryId": "cat-004",
-    "name": "Soundbars",
-    "slug": "soundbars"
-  },
-  {
-    "id": "subcat-018",
-    "categoryId": "cat-004",
-    "name": "Home Theater",
-    "slug": "home-theater"
-  },
-  {
-    "id": "prod-086",
-    "subCategoryId": "subcat-001",
-    "name": "ASUS ROG Strix SCAR 18",
-    "price": 3899.99,
-    "description": "Unrivaled performance with Intel Core i9-14900HX and RTX 4090 GPU.",
-    "category": "Computers",
-    "image": "../assets/products/rog-scar-18.png",
-    "rating": 4.9
-  },
-  {
-    "id": "prod-087",
-    "subCategoryId": "subcat-001",
-    "name": "Budget Gaming Nitro",
-    "price": 649.00,
-    "description": "Entry-level gaming. Plastic chassis feels flimsy and screen is dim at 250 nits.",
-    "category": "Computers",
-    "image": "../assets/products/nitro-5.png",
-    "rating": 3.1
-  },
-  {
-    "id": "prod-091",
-    "subCategoryId": "subcat-002",
-    "name": "Lenovo ThinkPad X1 Carbon Gen 12",
-    "price": 1549.00,
-    "description": "The gold standard of business laptops. Ultralight with an amazing keyboard.",
-    "category": "Computers",
-    "image": "../assets/products/thinkpad-x1.png",
-    "rating": 4.8
-  },
-  {
-    "id": "prod-092",
-    "subCategoryId": "subcat-002",
-    "name": "Basic Office Laptop B14",
-    "price": 299.00,
-    "description": "Slow Celeron processor. Struggles with more than 5 browser tabs open.",
-    "category": "Computers",
-    "image": "../assets/products/basic-office.png",
-    "rating": 2.8
-  },
-  {
-    "id": "prod-096",
-    "subCategoryId": "subcat-003",
-    "name": "Apple iMac 24-inch (M3)",
-    "price": 1299.00,
-    "description": "The world's best all-in-one desktop, now turbocharged by the M3 chip.",
-    "category": "Computers",
-    "image": "../assets/products/imac-m3.png",
-    "rating": 4.9
-  },
-  {
-    "id": "prod-097",
-    "subCategoryId": "subcat-003",
-    "name": "Compact Desktop Pro",
-    "price": 450.00,
-    "description": "Tiny form factor but very limited expansion slots. Fan gets loud under load.",
-    "category": "Computers",
-    "image": "../assets/products/compact-desk.png",
-    "rating": 3.4
-  },
-  {
-    "id": "prod-101",
-    "subCategoryId": "subcat-004",
-    "name": "Samsung Odyssey Neo G9",
-    "price": 1799.99,
-    "description": "57-inch Dual UHD curved gaming monitor with 240Hz refresh rate.",
-    "category": "Computers",
-    "image": "../assets/products/odyssey-g9.png",
-    "rating": 4.7
-  },
-  {
-    "id": "prod-102",
-    "subCategoryId": "subcat-004",
-    "name": "Eco-View 21-inch Monitor",
-    "price": 79.00,
-    "description": "Washy colors and poor viewing angles. Only supports VGA and HDMI 1.2.",
-    "category": "Computers",
-    "image": "../assets/products/eco-monitor.png",
-    "rating": 2.5
-  }
-]
+{
+  "subcategories": [
+    {
+      "id": "subcat-001",
+      "categoryId": "cat-001",
+      "name": "Gaming Laptops",
+      "slug": "gaming-laptops",
+      "description": "High-performance laptops for gaming with powerful GPUs",
+      "productCount": 2,
+      "image": "../assets/images/subcategories/gaming-laptops.png"
+    },
+    {
+      "id": "subcat-002",
+      "categoryId": "cat-001",
+      "name": "Business Laptops",
+      "slug": "business-laptops",
+      "description": "Professional laptops for work and productivity",
+      "productCount": 2,
+      "image": "../assets/images/subcategories/business-laptops.png"
+    },
+    {
+      "id": "subcat-003",
+      "categoryId": "cat-001",
+      "name": "Desktops",
+      "slug": "desktops",
+      "description": "All-in-one and tower desktop computers",
+      "productCount": 2,
+      "image": "../assets/images/subcategories/desktops.png"
+    },
+    {
+      "id": "subcat-004",
+      "categoryId": "cat-001",
+      "name": "Monitors",
+      "slug": "monitors",
+      "description": "Gaming and professional monitors",
+      "productCount": 2,
+      "image": "../assets/images/subcategories/monitors.png"
+    },
+    {
+      "id": "subcat-005",
+      "categoryId": "cat-001",
+      "name": "PC Accessories",
+      "slug": "pc-accessories",
+      "description": "Keyboards, mice, and other computer accessories",
+      "productCount": 0,
+      "image": "../assets/images/subcategories/pc-accessories.png"
+    },
+    {
+      "id": "subcat-006",
+      "categoryId": "cat-002",
+      "name": "iPhones",
+      "slug": "iphones",
+      "description": "Latest Apple iPhone models",
+      "productCount": 6,
+      "image": "../assets/images/subcategories/iphones.png"
+    },
+    {
+      "id": "subcat-007",
+      "categoryId": "cat-002",
+      "name": "Android Phones",
+      "slug": "android-phones",
+      "description": "Samsung Galaxy and other Android smartphones",
+      "productCount": 15,
+      "image": "../assets/images/subcategories/android-phones.png"
+    },
+    {
+      "id": "subcat-008",
+      "categoryId": "cat-002",
+      "name": "iPads",
+      "slug": "ipads",
+      "description": "Apple iPad tablets in all sizes",
+      "productCount": 5,
+      "image": "../assets/images/subcategories/ipads.png"
+    },
+    {
+      "id": "subcat-009",
+      "categoryId": "cat-002",
+      "name": "Android Tablets",
+      "slug": "tablets",
+      "description": "Samsung Galaxy Tabs and other Android tablets",
+      "productCount": 5,
+      "image": "../assets/images/subcategories/tablets.png"
+    },
+    {
+      "id": "subcat-010",
+      "categoryId": "cat-002",
+      "name": "Mobile Accessories",
+      "slug": "mobile-accessories",
+      "description": "Cases, chargers, power banks, and more",
+      "productCount": 14,
+      "image": "../assets/images/subcategories/mobile-accessories.png"
+    },
+    {
+      "id": "subcat-011",
+      "categoryId": "cat-003",
+      "name": "DSLR Cameras",
+      "slug": "dslr-cameras",
+      "description": "Professional DSLR cameras from Canon, Nikon, and more",
+      "productCount": 5,
+      "image": "../assets/images/subcategories/dslr-cameras.png"
+    },
+    {
+      "id": "subcat-012",
+      "categoryId": "cat-003",
+      "name": "Mirrorless Cameras",
+      "slug": "mirrorless-cameras",
+      "description": "Compact mirrorless cameras with interchangeable lenses",
+      "productCount": 5,
+      "image": "../assets/images/subcategories/mirrorless-cameras.png"
+    },
+    {
+      "id": "subcat-013",
+      "categoryId": "cat-003",
+      "name": "Camera Lenses",
+      "slug": "camera-lenses",
+      "description": "Professional lenses for all camera systems",
+      "productCount": 5,
+      "image": "../assets/images/subcategories/camera-lenses.png"
+    },
+    {
+      "id": "subcat-014",
+      "categoryId": "cat-003",
+      "name": "Action Cameras",
+      "slug": "action-cameras",
+      "description": "Rugged action cameras for adventure",
+      "productCount": 5,
+      "image": "../assets/images/subcategories/action-cameras.png"
+    },
+    {
+      "id": "subcat-015",
+      "categoryId": "cat-003",
+      "name": "Tripods & Accessories",
+      "slug": "tripods",
+      "description": "Camera tripods and mounting accessories",
+      "productCount": 5,
+      "image": "../assets/images/subcategories/tripods.png"
+    },
+    {
+      "id": "subcat-016",
+      "categoryId": "cat-004",
+      "name": "Headphones",
+      "slug": "headphones",
+      "description": "Over-ear, on-ear, and in-ear headphones",
+      "productCount": 2,
+      "image": "../assets/images/subcategories/headphones.png"
+    },
+    {
+      "id": "subcat-017",
+      "categoryId": "cat-004",
+      "name": "Bluetooth Speakers",
+      "slug": "bluetooth-speakers",
+      "description": "Portable and powerful wireless speakers",
+      "productCount": 2,
+      "image": "../assets/images/subcategories/bluetooth-speakers.png"
+    },
+    {
+      "id": "subcat-018",
+      "categoryId": "cat-004",
+      "name": "Home Theater Systems",
+      "slug": "home-theater",
+      "description": "Complete surround sound systems",
+      "productCount": 2,
+      "image": "../assets/images/subcategories/home-theater.png"
+    },
+    {
+      "id": "subcat-019",
+      "categoryId": "cat-004",
+      "name": "Soundbars",
+      "slug": "soundbars",
+      "description": "Premium soundbars for TV and entertainment",
+      "productCount": 2,
+      "image": "../assets/images/subcategories/soundbars.png"
+    }
+  ]
+}

@@ -1,34 +1,48 @@
-[
-  {
-    "id": "cat-001",
-    "name": "Laptops & Computers",
-    "slug": "laptops-computers",
-    "icon": "fa-laptop",
-    "description": "High performance laptops for gamers and professionals.",
-    "img":"../assets/images/categories/laptops-computers.jpg"
-  },
-  {
-    "id": "cat-002",
-    "name": "Smartphones & Tablets",
-    "slug": "smartphones-tablets",
-    "icon": "fa-mobile-alt",
-    "description": "Powerful smartphones and tablets for everyday use.",
-    "img":"../assets/images/categories/smartphones-tablets.jpg"
-  },
-  {
-    "id": "cat-003",
-    "name": "Cameras & Photos",
-    "slug": "cameras-photos",
-    "icon": "fa-camera",
-    "description":"Cameras and photos for capturing moments.",
-    "img":"../assets/images/categories/cameras-photos.jpg"
-  },
-  {
-    "id": "cat-004",
-    "name": "Audio & Video",
-    "slug": "audio-video",
-    "icon": "fa-headphones",
-    "description": "headphones and speakers for music and video.",
-    "img":"../assets/images/categories/audio-video.jpg"
-  }
-]
+{
+  "categories": [
+    {
+      "id": "cat-001",
+      "name": "Laptops & Computers",
+      "slug": "laptops-computers",
+      "icon": "fa-laptop",
+      "description": "High performance laptops, desktops, and monitors for gaming, business, and creative work.",
+      "image": "../assets/images/categories/laptops-computers.png",
+      "productCount": 16,
+      "featured": true,
+      "displayOrder": 1
+    },
+    {
+      "id": "cat-002",
+      "name": "Smartphones & Tablets",
+      "slug": "smartphones-tablets",
+      "icon": "fa-mobile-alt",
+      "description": "Latest smartphones and tablets from Apple, Samsung, and more with accessories.",
+      "image": "../assets/images/categories/smartphones-tablets.png",
+      "productCount": 45,
+      "featured": true,
+      "displayOrder": 2
+    },
+    {
+      "id": "cat-003",
+      "name": "Cameras & Photography",
+      "slug": "cameras-photos",
+      "icon": "fa-camera",
+      "description": "Professional cameras, lenses, action cams, and photography accessories.",
+      "image": "../assets/images/categories/cameras-photos.png",
+      "productCount": 25,
+      "featured": true,
+      "displayOrder": 3
+    },
+    {
+      "id": "cat-004",
+      "name": "Audio & Sound",
+      "slug": "audio-video",
+      "icon": "fa-headphones",
+      "description": "Premium headphones, speakers, soundbars, and home theater systems.",
+      "image": "../assets/images/categories/audio-video.png",
+      "productCount": 16,
+      "featured": true,
+      "displayOrder": 4
+    }
+  ]
+}
