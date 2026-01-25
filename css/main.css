@@ -3,7 +3,7 @@
 @import url("/css/base/variables.css");
 @import url("/css/base/typography.css");
 
-
+@import url("/css/components/fontawesome.css");
 
 /* =====  Layout Styles  ===== */
 @import url("/css/layout/footer.css");
