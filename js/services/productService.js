@@ -146,6 +146,8 @@ export const sortProducts = (products, sortBy) => {
       return sorted.sort((a, b) => (a.price || 0) - (b.price || 0));
     case "price-desc":
       return sorted.sort((a, b) => (b.price || 0) - (a.price || 0));
+    case "discount":
+      return sorted.sort((a, b) => (b.discount || 0) - (a.discount || 0));
     case "name":
       return sorted.sort((a, b) => (a.name || "").localeCompare(b.name || ""));
     case "rating":
