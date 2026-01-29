@@ -1,15 +1,33 @@
 import * as productService from "../services/productService.js";
 export const initHeader = async () => {
   const subcategoriesSelector = document.querySelector(".category-select");
-  if (!subcategoriesSelector) return;
+  const searchInput = document.querySelector(".search-input");
 
-  subcategoriesSelector.addEventListener("change", (event) => {});
+  if (!subcategoriesSelector || !searchInput) return;
 
   console.log("Header initialized");
+
+  // Load subcategories first
   await renderSubcategories(subcategoriesSelector);
+
+  // Helper to update placeholder
+  const updatePlaceholder = () => {
+    const selectedText =
+      subcategoriesSelector.options[subcategoriesSelector.selectedIndex]
+        ?.text || "all categories";
+
+    searchInput.placeholder = `Search in ${selectedText}...`;
+  };
+
+  // Initial placeholder
+  updatePlaceholder();
+
+  // Update on category change
+  subcategoriesSelector.addEventListener("change", updatePlaceholder);
 
   initSearch();
 };
+
 
 // Render subcategories
 async function renderSubcategories(selector) {
