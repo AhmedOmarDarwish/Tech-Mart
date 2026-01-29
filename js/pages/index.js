@@ -1,4 +1,6 @@
 import * as productService from "../services/productService.js";
+const subcategoriesContainer = document.querySelector(".categories-links");
+const categoriesContainer = document.querySelector(".product-page");
 
 const productsContainer = document.getElementById("productsContainer");
 const phoneproductsContainer = document.getElementById(
@@ -13,9 +15,9 @@ const popular = document.getElementById("popular");
 
 export async function init() {
   console.log("Home page initialized");
-
-  // await renderSubcategories();
-  // await renderTopCategories();
+  renderSlider();
+  await renderSubcategories();
+  await renderTopCategories();
   // await renderTopdiscounts();
   await renderTopProducts("discount", productsContainer);
   await renderTopRatedProductsByCategory("cat-002", phoneproductsContainer);
@@ -32,7 +34,6 @@ export async function init() {
 
     console.log("bestseller clicked");
     setActiveTab(bestseller, popular);
-
   });
 
   popular.addEventListener("click", async () => {
@@ -46,7 +47,7 @@ export async function init() {
 
 //get all subcategories
 async function renderSubcategories() {
-  if (!subcategoriesContainer || !subcategories) return;
+  if (!subcategoriesContainer) return;
 
   try {
     const subcategories = await productService.getAllSubcategories();
@@ -54,12 +55,12 @@ async function renderSubcategories() {
     subcategoriesContainer.innerHTML = "";
 
     subcategories.forEach((subcategory) => {
-      console.log(subcategory.name);
-      // const subcategoryElement = document.createElement("a");
-      // subcategoryElement.classList.add("subcategory");
-      // subcategoryElement.textContent = subcategory.name;
-      // subcategoryElement.href = `products.html?subcategory=${subcategory.id}`;
-      // subcategoriesContainer.appendChild(subcategoryElement);
+      const subcategoryElement = document.createElement("a");
+      subcategoryElement.classList.add("subcategory");
+      subcategoryElement.textContent = subcategory.name;
+      subcategoryElement.href = `products.html?subcategory=${subcategory.id}`;
+
+      subcategoriesContainer.appendChild(subcategoryElement);
     });
   } catch (error) {
     console.error("Error loading subcategories:", error);
@@ -68,13 +69,27 @@ async function renderSubcategories() {
 
 //get all Top categories
 async function renderTopCategories() {
-  if (!subcategoriesContainer) return;
+  if (!categoriesContainer) return;
 
   try {
     const categories = await productService.getAllCategories();
 
     categories.slice(0, 5).forEach((category) => {
       console.log(category.name);
+      const categoryElement = document.createElement("a");
+      const categoryImage = document.createElement("img");
+      const categoryTitle = document.createElement("p");
+      categoryElement.classList.add("categories-card");
+      categoryTitle.classList.add("categories-card__name");
+      categoryTitle.textContent = category.name;
+      categoryImage.src = category.image;
+      categoryElement.appendChild(categoryImage);
+      categoryElement.appendChild(categoryTitle);
+
+      categoryElement.href = `products.html?category=${category.id}`;
+      categoriesContainer.appendChild(categoryElement);
+
+
     });
   } catch (error) {
     console.error("Error loading categories:", error);
@@ -154,25 +169,6 @@ async function renderTopRatedProductsByCategory(categoryId, container) {
   }
 }
 
-// function setupCarouselButtons() {
-//   const nextButton = document.querySelector(".carousel__button--next");
-//   const prevButton = document.querySelector(".carousel__button--prev");
-//   const track = document.querySelector(".carousel__track");
-//   if (!nextButton || !prevButton || !track) return;
-//   const scroll = (direction) => {
-//     const cards = document.querySelectorAll(".product-card");
-//     if (!cards.length) return;
-//     const cardWidth = cards[0].offsetWidth;
-//     const gap = 20;
-//     const scrollAmount = cardWidth + gap;
-//     track.scrollBy({
-//       left: direction * scrollAmount,
-//       behavior: "smooth",
-//     });
-//   };
-//   nextButton.addEventListener("click", () => scroll(-1));
-//   prevButton.addEventListener("click", () => scroll(1));
-// }
 
 function setupCarouselButtons() {
   document.querySelectorAll(".carousel").forEach((carousel) => {
@@ -270,4 +266,105 @@ function createProductCard(product) {
   </div>
   `;
   return card;
+}
+
+
+
+function renderSlider() {
+  const HeroSlider = {
+    currentSlide: 0,
+    totalSlides: 3,
+    direction: 1, // for autoplay only
+
+    init() {
+      this.track = document.querySelector(".slider__track");
+      this.dots = document.querySelectorAll(".slider__dot");
+      this.prevBtn = document.querySelector(".slider__arrow--prev");
+      this.nextBtn = document.querySelector(".slider__arrow--next");
+
+      if (!this.track) return;
+
+      this.attachEvents();
+      this.updateDots();
+      this.startAutoPlay();
+    },
+
+    attachEvents() {
+      // ⬅ LEFT arrow (circular)
+      this.prevBtn?.addEventListener("click", () => {
+        this.goToSlide(
+          (this.currentSlide - 1 + this.totalSlides) % this.totalSlides,
+        );
+      });
+
+      // ➡ RIGHT arrow (circular)
+      this.nextBtn?.addEventListener("click", () => {
+        this.goToSlide((this.currentSlide + 1) % this.totalSlides);
+      });
+
+      // Dots
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => this.goToSlide(index));
+      });
+
+      // Keyboard (same as arrows)
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") this.prevBtn.click();
+        if (e.key === "ArrowRight") this.nextBtn.click();
+      });
+    },
+
+    // 🔁 AUTOPLAY ONLY (ping-pong)
+    autoMove() {
+      if (this.currentSlide === this.totalSlides - 1) {
+        this.direction = -1;
+      } else if (this.currentSlide === 0) {
+        this.direction = 1;
+      }
+
+      this.currentSlide += this.direction;
+      this.applyTransform();
+    },
+
+    goToSlide(index) {
+      this.currentSlide = index;
+      this.applyTransform();
+      this.resetAutoPlay();
+    },
+
+    applyTransform() {
+      const offset = -(this.currentSlide * (100 / this.totalSlides));
+      this.track.style.transform = `translateX(${offset}%)`;
+      this.updateDots();
+    },
+
+    updateDots() {
+      this.dots.forEach((dot, index) =>
+        dot.classList.toggle(
+          "slider__dot--active",
+          index === this.currentSlide,
+        ),
+      );
+    },
+
+    startAutoPlay() {
+      this.autoPlayInterval = setInterval(() => {
+        this.autoMove();
+      }, 4000);
+    },
+
+    resetAutoPlay() {
+      clearInterval(this.autoPlayInterval);
+      this.startAutoPlay();
+    },
+  };
+
+  // Safe init
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => HeroSlider.init());
+  } else {
+    HeroSlider.init();
+  }
+
+  window.HeroSlider = HeroSlider;
 }
