@@ -6,7 +6,7 @@
     <meta name="author" content="Tech-mart" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>Swoo</title>     
+    <title>Product Details - Tech-Mart</title>     
     <link
       rel="icon"
       href="../assets/images/logo/logo.svg"
@@ -20,61 +20,79 @@
     <div id="header"></div>
 
     <!-- Main -->
-    <div class="single-product__container">
-        <div></div>
-        <div class="single-product__path">
+    <main class="single-product__container">
+        <nav class="single-product__path">
             <a href="../index.html" class="single-product__path-link--home">Home</a>
-            <span class="single-product__path-separator">/</span><a class="single-product__path-link--shop" href="">Shop</a>
-            <span class="single-product__path-separator">/</span><a href="" class="single-product__path-link--category">Top Cell Phones & Tablets</a>
-            <span class="single-product__path-separator"></span><a href="" class="single-product__path-link--product">   </a>
-        </div>
+            <span class="single-product__path-separator"> / </span><a class="single-product__path-link--shop" href="">Shop</a>
+            <span class="single-product__path-separator"> / </span><a href="" class="single-product__path-link--category">Category</a>
+            <span class="single-product__path-separator"> / </span>
+        </nav>
 
-        <div class="single-product__main">
+        <section class="single-product__main">
             <div class="single-product__gallery">
-                <span class="single-product__gallery-tag">new</span>
+                <span class="single-product__gallery-tag">NEW</span>
                 <div class="single-product__gallery-image--main-container">
-                    <img class="single-product__gallery-image--main"></img>
+                    <img class="single-product__gallery-image--main">
                 </div>
                 <div class="single-product__gallery-image--sub-container">
                     <!-- Any sub images -->
                 </div> 
             </div>
-            <div class="single-product__info">
 
+            <!-- "Added to Cart" Confirmation -->
+            <div class="single-product__added_to_cart">
+                <img src="../assets/images/icons/right.png" alt="Product main image">
+                 <h4>Added to cart</h4>
             </div>
-            <div class="single-product__purchase">
+
+            <!-- Product Information Section -->
+            <section class="single-product__info">
+                <!-- Content will be inserted by JavaScript -->
+            </section>
+
+            <!-- Purchase Widget -->
+            <aside class="single-product__purchase">
                 <h4 class="single-product__purchase-title">Total Price: 
-                    <span class="single-product__purchase-price"></span>
+                    <span class="single-product__purchase-price">0.00$</span>
                 </h4>
+                <!-- Quantity Controls -->
                 <div class="single-product__quant single-product--btn">
                     <button class="single-product__quant-btn">-</button>
                     <span class="single-product__quant-value">1</span>
                     <button class="single-product__quant-btn">+</button>
                 </div>
-                <div class="single-product__add">
+                <!-- Action Buttons -->
+                <div class="single-product__btns-container">
                     <button class="single-product__add-btn single-product--btn">Add to Card</button>
+                    <button class="single-product__basket-btn single-product--btn">Go to Basket</button>
+                    <button class="single-product__buy-now-btn single-product--btn">Buy Now</button>
                 </div>
                 <hr>
                 <br>
+                <!-- Payment Methods -->
                 <h6>Guaranteed Safe Checkout</h6>
                 <div class="single-product__guarantee">
-                    <a href="https://www.paypal.com/"><img src="../assets/images/payment/paypal.png" alt="" class="single-product__guarantee-payment"></a>
-                    <a href="https://www.mastercard.com/"><img src="../assets/images/payment/Mastercard.svg" alt="" class="single-product__guarantee-payment"></a>
-                    <a href="https://www.klarna.com/"><img src="../assets/images/payment/Klarna.png" alt="" class="single-product__guarantee-payment"></a>
-                    <a href="https://www.stripe.com/"><img src="../assets/images/payment/stripe.png" alt="" class="single-product__guarantee-payment"></a>
-                    <a href="https://www.visa.com/"><img src="../assets/images/payment/visa.png" alt="" class="single-product__guarantee-payment"></a>
+                    <a href="https://www.paypal.com/"><img src="../assets/images/payment/paypal.png" alt="" class="single-product__guarantee-payment" title="PayPal"></a>
+                    <a href="https://www.mastercard.com/"><img src="../assets/images/payment/Mastercard.svg" alt="" class="single-product__guarantee-payment" title="mastercard"></a>
+                    <a href="https://www.klarna.com/"><img src="../assets/images/payment/Klarna.png" alt="" class="single-product__guarantee-payment" title="Klarna"></a>
+                    <a href="https://www.stripe.com/"><img src="../assets/images/payment/stripe.png" alt="" class="single-product__guarantee-payment" title="Stripe"></a>
+                    <a href="https://www.visa.com/"><img src="../assets/images/payment/visa.png" alt="" class="single-product__guarantee-payment" title="Visa"></a>
                 </div>
-            </div>
-        </div>
-    </div>
+            </aside>
+        </section>
+    </main>
 
     <!-- section reviews & Additional Info -->
     <section class="single-product__reviews">
-        <nav class="single-product__reviews--nav"><ul>
-            <li><a href="">Reviews</a></li>
-            <li><a href="">Additional Information</a></li>
-        </ul></nav>
+        <!-- Navigation Tabs -->
+        <nav class="single-product__reviews--nav">
+            <ul>
+                <li><a href="">Reviews</a></li>
+                <li><a href="">Additional Information</a></li>
+            </ul>
+        </nav>
         <article class="reviews__container">
+            <!-- Reviews inserted by JavaScript -->
             <!-- <div class="review__body">
                 <div class="review__user-info">
                     <div class="review__user-info--img-container">
@@ -100,11 +118,12 @@
                 <div class="review__info--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, voluptates!</div>
             </div> -->
         </article>
+        <!-- Additional Info Container -->
         <article class="Add_info"></article>
     </section>
     <!-- footer -->
     <div id="footer"></div>
     <script type="module" src="../js/main.js"></script>
-    <script src="../js/pages/single-product.js"></script>
+    <script src="../js/pages/single-product.js" type="module"></script>
   </body>
 </html>
