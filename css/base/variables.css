@@ -35,11 +35,15 @@
   --space-md: 16px;
   --space-lg: 24px;
   --space-xl: 32px;
+  --space-xxl: 40px;
+  --space-2xl: 48px;
 
   /* Border Radius */
   --radius-sm: 4px;
   --radius-md: 6px;
   --radius-lg: 10px;
+  --radius-xl: 15px;
+  --radius-xxl: 20px;
 
   /* Transitions */
   --transition-fast: 0.2s ease;

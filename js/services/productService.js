@@ -99,23 +99,27 @@ export const getProductsByCategory = async (categoryId) => {
  * Search products by query string
  * Searches in name, description, and category
  **/
-export const searchProducts = async (query) => {
+export const searchProducts = async (loadedProducts = [], query) => {
   try {
     if (!query || query.trim() === "") {
-      return await getAllProducts();
+      // return await getAllProducts();
+      return [];
     }
 
-    const products = await fetchProducts();
+    const products = loadedProducts || (await fetchProducts());
     const searchTerm = query.toLowerCase().trim();
 
     return products.filter((product) => {
       const name = (product.name || "").toLowerCase();
       const description = (product.description || "").toLowerCase();
       //   const category = (product.category || "").toLowerCase();
+      const tags = (product.tags || []).map((tag) => tag.toLowerCase());
 
       return (
-        name.includes(searchTerm) || description.includes(searchTerm)
+        name.includes(searchTerm) ||
+        description.includes(searchTerm) ||
         //  || category.includes(searchTerm)
+        tags.some((tag) => tag.includes(searchTerm))
       );
     });
   } catch (error) {
@@ -146,6 +150,8 @@ export const sortProducts = (products, sortBy) => {
       return sorted.sort((a, b) => (a.price || 0) - (b.price || 0));
     case "price-desc":
       return sorted.sort((a, b) => (b.price || 0) - (a.price || 0));
+    case "discount":
+      return sorted.sort((a, b) => (b.discount || 0) - (a.discount || 0));
     case "name":
       return sorted.sort((a, b) => (a.name || "").localeCompare(b.name || ""));
     case "rating":
