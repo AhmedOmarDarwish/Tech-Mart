@@ -410,6 +410,12 @@
   object-fit: cover;
 }
 
+.user-image:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .icon-circle{
     width: 40px;
@@ -533,6 +539,7 @@
 
 .cart-badge.bump {
   animation: bump 0.3s ease;
+  
 }
 
 @keyframes bump {
@@ -549,10 +556,71 @@
 
 .user-account,
 .cart-text {
-  display: none; /* Hide text on mobile */
+  display: flex; /* Hide text on mobile */
   flex-direction: column;
   line-height: 1.5;
 }
+
+.user-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+
+.profile-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  min-width: 120px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 6px 0;
+  z-index: 1000;
+}
+
+.profile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-menu li a,
+.profile-menu li button {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.profile-menu li a:hover,
+.profile-menu li button:hover {
+  background: #f3f4f6;
+}
+
+.hidden {
+  display: none !important;
+}
+/* 
+.profile-menu{
+ position: absolute;
+  top: 150px;
+  right: 100px;
+  min-width: 160px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  z-index: 1000;
+} */
+
 
 /* Show cart/user text on tablet+ */
 @media (min-width: 768px) {

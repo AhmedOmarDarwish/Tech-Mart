@@ -88,24 +88,33 @@
             <a href=""><i class="fa-solid fa-heart"></i></a>
           </div>
           <div class="icon-circle user-icon-wrapper">
-            <a class="user-icon" href="">
+            <a class="user-icon" href="/pages/login.html">
               <i class="fa-solid fa-user"></i>
             </a>
           </div>
           <img class="user-image hidden" src="" alt="user-icon" />
         </div>
 
-        <div class="user-account">
-          <span class="welcome-label hidden">WELCOME</span>
-          <strong class="user-name"
-            ><a href="/pages/login.html">LOG IN </a> /
-            <a href="/pages/register.html">REGISTER</a></strong
-          >
+        <div class="user-wrapper">
+          <div class="user-account" id="userAccount">
+            <span class="welcome-label hidden">WELCOME</span>
+            <strong class="user-name">
+              <a href="/pages/login.html" >LOG IN</a> /
+              <a href="/pages/register.html" >REGISTER</a>
+            </strong>
+          </div>
+
+          <div class="profile-menu hidden">
+            <ul>
+              <li><a href="/pages/profile.html">My Profile</a></li>
+              <li><button id="logoutBtn">Logout</button></li>
+            </ul>
+          </div>
         </div>
 
         <div class="cart-section">
           <div class="cart-icon-wrapper">
-            <a href=""
+            <a href="/pages/cart.html"
               ><i class="fa-solid fa-cart-shopping"></i
               ><span class="cart-badge hidden">20</span></a
             >

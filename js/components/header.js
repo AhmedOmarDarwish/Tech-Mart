@@ -1,7 +1,7 @@
 import * as productService from "../services/productService.js";
 import { formatPrice } from "../core/utils.js";
 import { getCartItemCount, getCartSubtotal } from "../services/cartService.js";
-import { isAuthenticated, getCurrentUser } from "../services/userService.js";
+import { isAuthenticated, getCurrentUser, logout } from "../services/userService.js";
 
 let subcategoriesSelector;
 let searchInput;
@@ -16,6 +16,8 @@ let welcomeLabel;
 let userName;
 let userImage;
 let usericonwrapper;
+let userWrapper;
+let profileMenu;
 var query;
 var categoryId;
 
@@ -33,6 +35,8 @@ export const initHeader = async () => {
   userName = document.querySelector(".user-name");
   userImage = document.querySelector(".user-image");
   usericonwrapper = document.querySelector(".user-icon-wrapper");
+  userWrapper = document.querySelector(".user-wrapper");
+  profileMenu = document.querySelector(".profile-menu");
 
   if (
     !subcategoriesSelector ||
@@ -43,7 +47,13 @@ export const initHeader = async () => {
     !searchbtn ||
     !cartbadge ||
     !carttotalAmount ||
-    !cartwrapper
+    !cartwrapper ||
+    !welcomeLabel ||
+    !userName ||
+    !userImage ||
+    !usericonwrapper ||
+    !userWrapper ||
+    !profileMenu
   )
     return;
 
@@ -117,6 +127,37 @@ export async function updateUser() {
 
     // Hide default icon
     usericonwrapper.classList.add("hidden");
+
+    userWrapper.addEventListener("click", (e) => {
+      if (!user) return;
+      e.stopPropagation();
+      profileMenu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", () => {
+      profileMenu.classList.add("hidden");
+    });
+
+    userImage.addEventListener("click", (e) => {
+            if (!user) return;
+            e.stopPropagation();
+            profileMenu.classList.toggle("hidden");
+    })
+
+    // Logout
+    document.getElementById("logoutBtn").addEventListener("click", async () => {
+      const confirmed = confirm("Are you sure you want to logout?");
+      if (!confirmed) return;
+
+      try {
+        await logout();
+        location.href = "/index.html";
+      } catch (err) {
+        console.error("Logout failed:", err);
+        alert("Something went wrong while logging out. Try again.");
+      }
+    });
+
   } else {
     welcomeLabel.classList.add("hidden");
     // Hide user image

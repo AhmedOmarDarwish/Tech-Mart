@@ -75,7 +75,7 @@ export const login = async (email, password) => {
 // Logout current user
 export const logout = () => {
   try {
-    storage.remove(USER_KEY);
+    storage.remove(SESSION_KEY);
     return true;
   } catch (error) {
     console.error("Logout error:", error);
