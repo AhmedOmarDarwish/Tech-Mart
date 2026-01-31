@@ -30,9 +30,9 @@
 }
 .banners {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 24px;
-    padding: 24px 24px 24px 0;;
+    padding: 24px 24px 24px 0;
 }
 
 .banner {
@@ -94,14 +94,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.page-1 {
-    max-width: 1400px;
-    margin: 2vh 1vw;
-    padding: var(--space-lg) 24px;
-    background-color: var(--color-bg);
-    font-family: var(--font-main);
-    border-radius: var(--radius-xxl);
-}
+
 
 .product__popular-categories .categories {
     display: grid;
@@ -156,9 +149,20 @@
     color: var(--color-text-light);
     margin: 0;
 }
+
+.best-seller__categories {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 30px;
+}
+
+.best-seller__categories > :nth-child(2) {
+  padding-left: 50px;
+}
+
 .product__dashboard-sidebar {
-    background-color: var(--color-bg);
-    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-soft);
+    /* border: 1px solid var(--color-border); */
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
 }
@@ -192,6 +196,7 @@
   position: relative;
   width: 100%;
   padding: 20px 0;
+  overflow: hidden;
 }
 
 .carousel__wrapper {
@@ -201,10 +206,12 @@
 
 .carousel__track {
   display: flex;
+  overflow: visible;   /* مهم */
+  padding: 10px 60px;  /* مساحة للأسهم */
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   cursor: pointer;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -220,6 +227,7 @@
 
 .carousel__button {
   position: absolute;
+  z-index: 5;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.9);
@@ -416,6 +424,3 @@
   font-size: 13px;
   color: var(--color-text-muted);
 }
-
-/* ===== PAGE LAYOUT ===== */
-/*  */
