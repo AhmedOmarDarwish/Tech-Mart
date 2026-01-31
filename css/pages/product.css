@@ -162,17 +162,17 @@
 
 .product__dashboard-sidebar {
     background-color: var(--color-bg-soft);
-    /* border: 1px solid var(--color-border); */
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
+    margin-bottom: -10px;
 }
 
 .product__dashboard-sidebar .categories-links {
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    gap: 6px;
+    margin-top: var(--space-sm);
 }
 
 .product__dashboard-sidebar .categories-links a:hover {
