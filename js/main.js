@@ -29,30 +29,35 @@ const loadPageModule = async (pageName) => {
   try {
     switch (pageName) {
       case "index":
-        const page = await import("./pages/index.js");
-        if (page.init) await page.init();
+        const indexPage = await import("./pages/index.js");
+        if (indexPage.init) await indexPage.init();
         break;
 
-      case "products":
-        const { initProductsPage } = await import("./pages/products.js");
-        await initProductsPage();
+      case "login":
+        const loginPage = await import("./pages/login.js");
+        if (loginPage.init) await loginPage.init();
         break;
 
-      case "product-detail":
-        const { initProductDetailPage } =
-          await import("./pages/productDetail.js");
-        await initProductDetailPage();
+      case "register":
+        const  registerPage = await import("./pages/register.js");
+        if (registerPage.init) await registerPage.init();
         break;
 
-      case "cart":
-        const { initCartPage } = await import("./pages/cart.js");
-        await initCartPage();
-        break;
+      // case "product-detail":
+      //   const { initProductDetailPage } =
+      //     await import("./pages/productDetail.js");
+      //   await initProductDetailPage();
+      //   break;
 
-      case "checkout":
-        const { initCheckoutPage } = await import("./pages/checkout.js");
-        await initCheckoutPage();
-        break;
+      // case "cart":
+      //   const { initCartPage } = await import("./pages/cart.js");
+      //   await initCartPage();
+      //   break;
+
+      // case "checkout":
+      //   const { initCheckoutPage } = await import("./pages/checkout.js");
+      //   await initCheckoutPage();
+      //   break;
 
       default:
         console.log(`No specific initialization for page: ${pageName}`);

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Swoo Tech Mart</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/pages/login.css" />
+  </head>
+  <body data-page="login">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <div class="login-page">
+      <div class="login-left">
+        <img
+          src="../assets/images/login-register/login.svg"
+          alt="Login Illustration"
+        />
+      </div>
+
+      <div class="login-right">
+        <h2>Welcome Back</h2>
+        <p>LOGIN TO CONTINUE</p>
+        <form class="login-form">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="example@gmail.com"
+              required
+            />
+            <span class="error-message" id="emailError"></span>
+          </div>
+          <div class="form-group password-group">
+            <label for="password">Password</label>
+            <div>
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                required
+              />
+              <i class="fa-solid fa-eye-slash toggle-password"></i>
+            </div>
+            <span class="error-message" id="passwordError"></span>
+          </div>
+          <a href="#" class="forget-password">Forget Password ?</a>
+          <span class="error-message" id="loginError"></span>
+          <button type="submit" class="btn-login">LOGIN</button>
+
+        </form>
+        <p class="login-link">NEW USER ? <a href="register.html">SIGN UP</a></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- <script src="../js/pages/login.js"></script> -->
+    <script type="module" src="/js/main.js" defer></script>
+  </body>
+</html>

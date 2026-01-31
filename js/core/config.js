@@ -9,6 +9,7 @@ export const APP_CONFIG = {
     // cart: "techmart_cart",
     cart: "cart",
     user: "techmart_user",
+    session: "current_user",
     orders: "techmart_orders",
     wishlist: "techmart_wishlist",
   },
