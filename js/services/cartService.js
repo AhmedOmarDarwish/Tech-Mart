@@ -30,7 +30,7 @@ export const addToCart = (product, quantity = 1) => {
 
     const cart = getCart();
     const existingItemIndex = cart.findIndex(
-      (item) => String(item.product.id) === String(product.id),
+      (item) => String(item.id) === String(product.id),
     );
 
     if (existingItemIndex > -1) {
@@ -58,7 +58,7 @@ export const removeFromCart = (productId) => {
   try {
     const cart = getCart();
     const filteredCart = cart.filter(
-      (item) => String(item.product.id) !== String(productId),
+      (item) => String(item.id) !== String(productId),
     );
     return saveCart(filteredCart);
   } catch (error) {
@@ -78,7 +78,7 @@ export const updateQuantity = (productId, quantity) => {
 
     const cart = getCart();
     const itemIndex = cart.findIndex(
-      (item) => String(item.product.id) === String(productId),
+      (item) => String(item.id) === String(productId),
     );
 
     if (itemIndex === -1) {
@@ -117,7 +117,7 @@ export const getCartItemCount = () => {
 export const getCartSubtotal = () => {
   const cart = getCart();
   return cart.reduce((total, item) => {
-    const price = item.product.price || 0;
+    const price = item.price || 0;
     return total + price * item.quantity;
   }, 0);
 };
@@ -149,7 +149,7 @@ export const getCartTotal = () => {
  // Check if product is in cart
 export const isInCart = (productId) => {
   const cart = getCart();
-  return cart.some((item) => String(item.product.id) === String(productId));
+  return cart.some((item) => String(item.id) === String(productId));
 };
 
 
@@ -158,6 +158,6 @@ export const isInCart = (productId) => {
 export const getCartItem = (productId) => {
   const cart = getCart();
   return (
-    cart.find((item) => String(item.product.id) === String(productId)) || null
+    cart.find((item) => String(item.id) === String(productId)) || null
   );
 };

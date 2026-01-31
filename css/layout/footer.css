@@ -1,18 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-main);
-    background-color: #f5f5f5;
-}
-
 /* Footer Container */
-.footer {
+footer {
     background-color: var(--color-bg);
     border-top: 1px solid var(--color-border);
+        flex-wrap: wrap;
+
+
 }
 
 .footer__container {
@@ -282,4 +274,18 @@ body {
 
 .footer__mobile-link:hover {
     color: var(--color-primary);
+}
+
+/* before - Tablet+ */
+@media (max-width: 768px) {
+/* footer{
+    display: none;
+} */
+.footer__section, .footer__newsletter{
+    display: none;
+
+}
+
+
+
 }

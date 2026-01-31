@@ -1,32 +1,25 @@
 import APP_CONFIG from "../core/config.js";
 import * as storage from "../core/storage.js";
 
-const USER_KEY = APP_CONFIG.storageKeys.user;
+const USER_KEY = APP_CONFIG.storageKeys.user; // Array of all registered users
+const SESSION_KEY = APP_CONFIG.storageKeys.session; // Logged-in session
 
-let usersCache = null;
+
+// let usersCache = null;
 
 // Fetch users from JSON file
-const fetchUsers = async () => {
-  if (usersCache) {
-    return usersCache;
-  }
-
+export const fetchUsers = async () => {
   try {
-    const response = await fetch(APP_CONFIG.dataPaths.users);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    usersCache = await response.json();
-    return usersCache;
+    const users = storage.get(USER_KEY); 
+
+    return Array.isArray(users) ? users : [];
   } catch (error) {
     console.error("Error fetching users:", error);
-    // Return empty array instead of throwing to prevent app crash
     return [];
   }
 };
 
-
- //  user login
+//  user login
 export const login = async (email, password) => {
   try {
     // Validate inputs
@@ -63,7 +56,7 @@ export const login = async (email, password) => {
       loginTime: new Date().toISOString(),
     };
 
-    storage.set(USER_KEY, session);
+    storage.set(SESSION_KEY, session);
 
     return {
       success: true,
@@ -79,8 +72,7 @@ export const login = async (email, password) => {
   }
 };
 
-
- // Logout current user
+// Logout current user
 export const logout = () => {
   try {
     storage.remove(USER_KEY);
@@ -91,19 +83,15 @@ export const logout = () => {
   }
 };
 
-
 // Get currently logged in user from session
 export const getCurrentUser = () => {
   return storage.get(USER_KEY);
 };
 
-
-
 // Check if user is authenticated
 export const isAuthenticated = () => {
   return getCurrentUser() !== null;
 };
-
 
 // Update user profile in session
 export const updateProfile = (updates) => {
@@ -143,13 +131,12 @@ export const updateProfile = (updates) => {
   }
 };
 
-
- // Register new user (simulation)
+// Register new user (simulation)
 export const register = async (userData) => {
   try {
-    const { email, password, name, phone } = userData;
+    const { email, password, name, phone = "" } = userData;
 
-    // Validate inputs
+    // 1️⃣ Validate inputs
     if (!email || !password || !name) {
       return {
         success: false,
@@ -157,42 +144,41 @@ export const register = async (userData) => {
       };
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // 2️⃣ Validate email format
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
+      return { success: false, message: "Invalid email format" };
+    }
+
+    // 3️⃣ Validate password
+    const passwordPattern =
+      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+    if (!passwordPattern.test(password)) {
       return {
         success: false,
-        message: "Invalid email format",
+        message:
+          "Password must be at least 8 characters and include uppercase, lowercase, number, and special character.",
       };
     }
 
-    // Validate password length
-    if (password.length < 6) {
-      return {
-        success: false,
-        message: "Password must be at least 6 characters",
-      };
-    }
+    // 4️⃣ Get existing users from localStorage
+    let users = JSON.parse(localStorage.getItem(USER_KEY)) || [];
 
-    // Check if user already exists in JSON
-    const users = await fetchUsers();
+    // 5️⃣ Check if email already exists
     const existingUser = users.find(
       (u) => u.email.toLowerCase() === email.toLowerCase(),
     );
-
     if (existingUser) {
-      return {
-        success: false,
-        message: "Email already registered",
-      };
+      return { success: false, message: "Email already registered" };
     }
 
-    // Create new user session (not saved to JSON in this mock setup)
+    // 6️⃣ Create new user
     const newUser = {
       id: `user-${Date.now()}`,
       email: email.toLowerCase(),
-      name: name,
-      phone: phone || "",
+      password,
+      name,
+      phone,
       role: "user",
       avatar: "../assets/images/users/default-avatar.png",
       wishlist: [],
@@ -200,28 +186,20 @@ export const register = async (userData) => {
       createdAt: new Date().toISOString(),
     };
 
-    // Create session in localStorage
-    const session = {
-      ...newUser,
-      loginTime: new Date().toISOString(),
-    };
+    // 7️⃣ Save new user in users list
+    users.push(newUser);
+    localStorage.setItem(USER_KEY, JSON.stringify(users));
 
-    storage.set(USER_KEY, session);
+    // // 8️⃣ Create session for logged-in user
+    // const session = { ...newUser, loginTime: new Date().toISOString() };
+    // localStorage.setItem(SESSION_KEY, JSON.stringify(session));
 
-    return {
-      success: true,
-      message: "Registration successful",
-      user: session,
-    };
+    return { success: true, message: "Registration successful", user: session };
   } catch (error) {
     console.error("Registration error:", error);
-    return {
-      success: false,
-      message: "An error occurred during registration",
-    };
+    return { success: false, message: "An error occurred during registration" };
   }
 };
-
 
 // Add item to user wishlist
 export const addToWishlist = (productId) => {
@@ -257,8 +235,7 @@ export const addToWishlist = (productId) => {
   }
 };
 
-
- // Remove item from user wishlist
+// Remove item from user wishlist
 export const removeFromWishlist = (productId) => {
   try {
     const currentUser = getCurrentUser();
@@ -282,15 +259,13 @@ export const removeFromWishlist = (productId) => {
   }
 };
 
-
- // Get user wishlist
+// Get user wishlist
 export const getWishlist = () => {
   const currentUser = getCurrentUser();
   return currentUser?.wishlist || [];
 };
 
-
- // Add address to user profile
+// Add address to user profile
 export const addAddress = (address) => {
   try {
     const currentUser = getCurrentUser();
@@ -320,9 +295,8 @@ export const addAddress = (address) => {
   }
 };
 
-
- // Update address in user profile
- // Updates session only
+// Update address in user profile
+// Updates session only
 
 export const updateAddress = (addressId, updates) => {
   try {
@@ -359,9 +333,8 @@ export const updateAddress = (addressId, updates) => {
   }
 };
 
-
- // Remove address from user profile
- // Updates session only
+// Remove address from user profile
+// Updates session only
 export const removeAddress = (addressId) => {
   try {
     const currentUser = getCurrentUser();
@@ -386,7 +359,7 @@ export const removeAddress = (addressId) => {
   }
 };
 
- // Set default address
+// Set default address
 export const setDefaultAddress = (addressId) => {
   try {
     const currentUser = getCurrentUser();
@@ -412,22 +385,19 @@ export const setDefaultAddress = (addressId) => {
   }
 };
 
-
- // Get user addresses
+// Get user addresses
 export const getAddresses = () => {
   const currentUser = getCurrentUser();
   return currentUser?.address || [];
 };
 
-
- // Get default address
+// Get default address
 export const getDefaultAddress = () => {
   const addresses = getAddresses();
   return addresses.find((addr) => addr.isDefault) || addresses[0] || null;
 };
 
-
- // Check if email exists in JSON file
+// Check if email exists in JSON file
 export const emailExists = async (email) => {
   try {
     const users = await fetchUsers();
@@ -438,8 +408,7 @@ export const emailExists = async (email) => {
   }
 };
 
-
- // Reset password (simulation)
+// Reset password (simulation)
 export const resetPassword = async (email) => {
   try {
     if (!email) {
@@ -477,8 +446,7 @@ export const resetPassword = async (email) => {
   }
 };
 
-
- // Get user by ID from JSON file
+// Get user by ID from JSON file
 export const getUserById = async (userId) => {
   try {
     const users = await fetchUsers();

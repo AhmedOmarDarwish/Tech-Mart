@@ -1,12 +1,16 @@
 import * as productService from "../services/productService.js";
+import { formatPrice } from "../core/utils.js";
+import { getCartItemCount, getCartSubtotal } from "../services/cartService.js";
 
 let subcategoriesSelector;
 let searchInput;
-let searchBtn;
 let dropdown;
 let suggestionsEl;
 let searchHeader;
 let searchbtn;
+let cartbadge;
+let carttotalAmount;
+let cartwrapper;
 var query;
 var categoryId;
 
@@ -17,6 +21,9 @@ export const initHeader = async () => {
   suggestionsEl = document.querySelector(".suggestions");
   searchbtn = document.querySelector(".search-btn");
   searchHeader = document.querySelector(".keep-shopping h4");
+  cartbadge = document.querySelector(".cart-badge");
+  carttotalAmount = document.querySelector(".cart-amount");
+  cartwrapper = document.querySelector(".cart-icon-wrapper");
 
   if (
     !subcategoriesSelector ||
@@ -24,19 +31,23 @@ export const initHeader = async () => {
     !dropdown ||
     !suggestionsEl ||
     !searchHeader ||
-    !searchbtn
+    !searchbtn ||
+    !cartbadge ||
+    !carttotalAmount ||
+    !cartwrapper
   )
     return;
 
   // Load subcategories
   await renderSubcategories(subcategoriesSelector);
 
+  //Load cart badge
+  await updateCartBadge();
+
   // Initial placeholder
   updatePlaceholder();
 
   // Update on category change
-  subcategoriesSelector.addEventListener("change", updatePlaceholder);
-
   subcategoriesSelector.addEventListener("change", async () => {
     searchHeader.textContent = `Keep shopping for ${subcategoriesSelector.options[subcategoriesSelector.selectedIndex]?.text}`;
     updatePlaceholder();
@@ -51,8 +62,9 @@ export const initHeader = async () => {
     search(query, categoryId);
   });
 
+
   await initSearch();
-};
+};;
 
 // Update placeholder
 const updatePlaceholder = () => {
@@ -62,6 +74,25 @@ const updatePlaceholder = () => {
 
   searchInput.placeholder = `Search in ${selectedText}...`;
 };
+
+export async function updateCartBadge() {
+  var itemCount = await getCartItemCount();
+  if (itemCount > 0) {
+    cartbadge.classList.remove("hidden");
+    cartwrapper.classList.remove("disabled");
+    cartbadge.classList.add("bump");
+    setTimeout(() => cartbadge.classList.remove("bump"), 300);
+
+    //Load cart badge
+    cartbadge.textContent = itemCount;
+  } else {
+    cartbadge.classList.add("hidden");
+    cartwrapper.classList.add("disabled");
+  }
+
+  //Load cart total amount
+  carttotalAmount.textContent = formatPrice(await getCartSubtotal());
+}
 
 /* Click outside of dropdown */
 document.addEventListener("click", (e) => {
@@ -146,3 +177,9 @@ async function renderSubcategories(selector) {
     console.error("Error loading subcategories:", error);
   }
 }
+
+
+
+
+
+
