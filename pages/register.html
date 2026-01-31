@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Swoo Tech Mart</title>
+  <link
+      rel="shortcut icon"
+      href="/assets/images/logo/logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/pages/register.css" />
+  </head>
+  <body data-page="register">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main>
+      <div class="register-page">
+        <div class="register-left">
+          <img
+            src="../assets/images/login-register/login.svg"
+            alt="Register Illustration"
+          />
+        </div>
+
+        <div class="register-right">
+          <h2>Register</h2>
+          <p>Join to us</p>
+
+          <form class="register-form">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" placeholder="John Doe" required />
+              <div>
+                <span class="error-message" id="nameError"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="example@gmail.com"
+                required
+              />
+              <div>
+                <span class="error-message" id="emailError"></span>
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group password-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                required
+              />
+              <i class="fa-solid fa-eye-slash toggle-password"></i>
+              <div>
+                <span class="error-message" id="passwordError"></span>
+              </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group password-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="••••••••"
+                required
+              />
+              <i class="fa-solid fa-eye-slash toggle-password"></i>
+              <div>
+                <span class="error-message" id="confirmPasswordError"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-register">REGISTER</button>
+          </form>
+
+          <p class="login-link">
+            Already user ? <a href="login.html">LOGIN</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <!-- <script src="../js/pages/registions.js"></script> -->
+    <script type="module" src="/js/main.js" defer></script>
+  </body>
+</html>

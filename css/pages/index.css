@@ -738,15 +738,7 @@
   right: 10px;
 }
 
-.product-card {
-  flex: 0 0 auto;
-  min-width: 250px;
-  max-width: 280px;
-}
-.product-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
+
 
 .product-card__image-container {
   border-radius: var(--radius-lg);
@@ -1059,6 +1051,8 @@
 
 .product-card {
   flex: 0 0 auto;
+    min-width: 250px;
+  max-width: 280px;
   width: 200px;
   background: var(--color-bg);
   border-radius: 12px;
