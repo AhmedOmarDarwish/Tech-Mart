@@ -206,12 +206,11 @@
 
 .carousel__track {
   display: flex;
-  overflow: visible;   /* مهم */
-  padding: 10px 60px;  /* مساحة للأسهم */
+  overflow: visible;
+  padding: 10px 60px;
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  /* padding: 10px 0; */
   cursor: pointer;
   scrollbar-width: none;
   -ms-overflow-style: none;
