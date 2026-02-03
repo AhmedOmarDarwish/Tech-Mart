@@ -119,8 +119,9 @@ export async function updateUser() {
   const authStatus = await isAuthenticated(); // rename variable
   if (authStatus) {
     const user = await getCurrentUser();
+    var name = user.name.split(" ")[0] + " " + user.name.split(" ")[1] || "";
     welcomeLabel.classList.remove("hidden");
-    userName.textContent = user.name;
+    userName.textContent = name;
     // Show user image
     userImage.src = user.avatar || ""; // set image URL
     userImage.classList.remove("hidden");

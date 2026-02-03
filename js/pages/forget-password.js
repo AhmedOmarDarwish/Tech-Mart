@@ -14,6 +14,15 @@ export async function init() {
   var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   var passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
 
+  //Check if user is logged in
+  const BASE_URL = window.location.origin;
+  const currentUser = await userService.getCurrentUser();
+  if (currentUser) {
+    // If no user, redirect to login/index page
+    history.replaceState(null, null, `${BASE_URL}/index.html`);
+    window.location.reload();
+  }
+
   // Toggle password visibility
   togglePasswordBtns.forEach((toggleBtn) => {
     toggleBtn.addEventListener("click", (e) => {

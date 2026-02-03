@@ -1,5 +1,5 @@
 import * as userService from "../services/userService.js";
-import {updateUser} from "../components/header.js";
+import { updateUser } from "../components/header.js";
 
 export async function init() {
   const BASE_URL = window.location.origin;
@@ -15,6 +15,14 @@ export async function init() {
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   console.log("login page initialized");
+
+    //Check if user is logged in
+    const currentUser = await userService.getCurrentUser();
+    if (currentUser) {
+      // If no user, redirect to login/index page
+      history.replaceState(null, null, `${BASE_URL}/index.html`);
+      window.location.reload();
+    }
 
   // Toggle password visibility
   togglePasswordBtn.addEventListener("click", () => {
@@ -71,7 +79,7 @@ export async function init() {
     }
 
     // Success login
-   var response = await userService.login(email, password);
+    var response = await userService.login(email, password);
 
     if (!response.success) {
       loginError.textContent = response.message;
@@ -83,7 +91,6 @@ export async function init() {
 
     history.replaceState(null, null, `${BASE_URL}/index.html`);
     window.location.reload();
-    
   });
 
   await updateUser();
