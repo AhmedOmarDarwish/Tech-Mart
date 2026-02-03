@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../css/pages/checkout.css" />
+</head>
+<body>
+<div class="checkout">
+
+  <div class="left">
+    <h2>Billing Details</h2>
+
+    <form id="checkoutForm">
+      <div class="row">
+        <input type="text" name="firstName" placeholder="First Name" required />
+        <input type="text" name="lastName" placeholder="Last Name" required />
+      </div>
+
+      <input type="text" name="company" placeholder="Company Name (Optional)" />
+
+      <select name="country" required>
+        <option value="">Country</option>
+        <option value="US">United States</option>
+        <option value="EG">Egypt</option>
+      </select>
+
+      <input type="text" name="address" placeholder="Street Address" required />
+      <input type="text" name="city" placeholder="City" required />
+
+      <input type="text" name="state" placeholder="State" required />
+      <input type="text" name="zip" placeholder="Zip Code" required />
+
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+
+      <textarea name="notes" placeholder="Order notes (optional)"></textarea>
+
+      <h3>Payment Method</h3>
+      <label>
+        <input type="radio" name="payment" value="bank" checked />
+        Direct Bank Transfer
+      </label>
+      <label>
+        <input type="radio" name="payment" value="cash" />
+        Cash on Delivery
+      </label>
+      <label>
+        <input type="radio" name="payment" value="paypal" />
+        PayPal
+      </label>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <div class="right">
+    <h2>Your Order</h2>
+    <div id="orderSummary"></div>
+  </div>
+
+</div>
+<script src="../js/pages/checkout.js"></script>
+</body>
+</html>
