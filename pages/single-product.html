@@ -23,8 +23,8 @@
     <main class="single-product__container">
         <nav class="single-product__path">
             <a href="../index.html" class="single-product__path-link--home">Home</a>
-            <span class="single-product__path-separator"> / </span><a class="single-product__path-link--shop" href="">Shop</a>
-            <span class="single-product__path-separator"> / </span><a href="" class="single-product__path-link--category">Category</a>
+            <span class="single-product__path-separator"> / </span><a class="single-product__path-link--shop" href="./product.html">Shop</a>
+            <span class="single-product__path-separator"> / </span><a href="./product.html" class="single-product__path-link--category">Category</a>
             <span class="single-product__path-separator"> / </span>
         </nav>
 
@@ -56,7 +56,7 @@
                     <span class="single-product__purchase-price">0.00$</span>
                 </h4>
                 <!-- Quantity Controls -->
-                <div class="single-product__quant single-product--btn">
+                <div class="single-product__quant single-product--btn single-product__quant-btn--container">
                     <button class="single-product__quant-btn">-</button>
                     <span class="single-product__quant-value">1</span>
                     <button class="single-product__quant-btn">+</button>
@@ -81,6 +81,51 @@
             </aside>
         </section>
     </main>
+    <section class="single-product__freq">
+        <div class="single-product__freq-main">
+        <h4 class="single-product__freq-items-header">FREQUENTLY BOUGHT TOGETHER</h4>
+        <div class="single-product__freq-items-purchase--container">
+            <div class="single-product__freq-items--container">
+                <div class="single-product__freq-items-imgs--container">
+                    <!-- <img src="" alt="">
+                    <span class="single-product__freq-items-imgs-plus">+</span>
+                    <img src="" alt="">
+                    <span class="single-product__freq-items-imgs-plus">+</span>
+                    <img src="" alt=""> -->
+                </div>
+                <div class="single-product__freq-items-checkbox--container">
+                    <!-- <label>
+                        <input type="checkbox" name="freq_checkbox" id="freq_checkbox1">
+                        <span>mainProd</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="freq_checkbox" id="freq_checkbox2">
+                        <span>subProd1</span>
+                    </label>
+                    <label for="freq_checkbox3">
+                        <input type="checkbox" name="freq_checkbox" id="freq_checkbox3">
+                        <span>subProd2</span>
+                    </label> -->
+                </div>
+            </div>
+            <div class="single-product__freq-purchase single-product__purchase">
+                    <h4 class="single-product__purchase-title">Total Price: 
+                        <span class="single-product__purchase-price">0.00$</span>
+                    </h4>
+                    <div class="single-product__btns-container">
+                     <button class="single-product__add-btn single-product--btn">Add to Card</button>
+                     <button class="single-product__basket-btn single-product--btn">Go to Basket</button>
+                        <button class="single-product__buy-now-btn single-product--btn">Buy Now</button>
+                    </div>
+            </div>
+        </div>
+        </div>
+        <div class="single-product__freq-aside">
+            <img src="../assets/images/banners/main/Main-Section- ban1.svg" alt="">
+            <img src="../assets/images/banners/main/Main-Section- ban2.svg" alt="">
+        </div>
+    </section>
+
 
     <!-- section reviews & Additional Info -->
     <section class="single-product__reviews">
@@ -88,7 +133,7 @@
         <nav class="single-product__reviews--nav">
             <ul>
                 <li><a href="">Reviews</a></li>
-                <li><a href="">Additional Information</a></li>
+                <!-- <li><a href="">Additional Information</a></li> -->
             </ul>
         </nav>
         <article class="reviews__container">
