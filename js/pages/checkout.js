@@ -195,7 +195,7 @@ async function handleCheckoutSubmit(e) {
 
     // Create order object
     const order = {
-      id: generateOrderId(),
+      id: userService.getCurrentUser().id,
       items: cartItems,
       billingDetails,
       summary: orderSummary,
@@ -310,20 +310,9 @@ function showSuccessModal(order) {
 }
 
 function showNotification(message, type = "info") {
-  // Create a simple notification (can be replaced with toast library)
   const notification = document.createElement("div");
+  notification.className = `notification notification--${type}`;
   notification.textContent = message;
-  notification.style.cssText = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    background: ${type === "error" ? "#ff4444" : type === "success" ? "#2bbf4b" : "#007bff"};
-    color: white;
-    border-radius: 4px;
-    z-index: 2000;
-    animation: slideIn 0.3s ease;
-  `;
   document.body.appendChild(notification);
 
   setTimeout(() => {
@@ -331,30 +320,3 @@ function showNotification(message, type = "info") {
     setTimeout(() => notification.remove(), 300);
   }, 3000);
 }
-
-// Add animation styles
-const style = document.createElement("style");
-style.textContent = `
-  @keyframes slideIn {
-    from {
-      transform: translateX(400px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideOut {
-    from {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateX(400px);
-      opacity: 0;
-    }
-  }
-`;
-document.head.appendChild(style);

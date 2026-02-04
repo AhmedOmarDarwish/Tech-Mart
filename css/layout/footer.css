@@ -1,10 +1,9 @@
 /* Footer Container */
 footer {
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-soft);
     border-top: 1px solid var(--color-border);
-        flex-wrap: wrap;
-
-
+    flex-wrap: wrap;
+    margin-top: 60px;
 }
 
 .footer__container {
@@ -133,10 +132,10 @@ footer {
 /* Newsletter Section */
 
 .footer__newsletter {
-    background-color: var(--color-bg-soft);
+    background-color: var(--color-bg);
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
-    padding: 30px 20px;
+    padding: 0 20px;
 }
 
 .footer__container--newsletter {
@@ -167,7 +166,7 @@ footer {
 }
 
 .newsletter__highlight {
-    color: red;
+    color: var(--color-discount);
 }
 
 .newsletter__form {
@@ -196,7 +195,7 @@ footer {
 .newsletter__button {
     padding: 12px 30px;
     background: none;
-    color: #00b050;
+    color: var(--color-primary);
     border: 1px solid transparent;
     border-bottom: 1px solid var(--color-border);
     font-size: var(--font-size-sm);
@@ -239,12 +238,12 @@ footer {
     border-radius: var(--radius-sm);
     font-size: 13px;
     cursor: pointer;
-    background-color: white;
+    background-color: var(--color-bg);
 }
 
 /* Bottom Section */
 .footer__bottom {
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-soft);
 }
 
 .footer__copyright {
@@ -252,7 +251,7 @@ footer {
     color: var(--color-text-muted);
 }
 .footer__copyright strong {
-    color: black;
+    color: var(--color-text-strong);
 }
 
 .footer__payments {
@@ -268,7 +267,7 @@ footer {
 
 .footer__mobile-link {
     font-size: 13px;
-    color: blue;
+    color: var(--color-primary);
     text-decoration: none;
 }
 

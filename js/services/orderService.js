@@ -11,10 +11,11 @@ export async function getOrdersForCurrentUser() {
 
   try {
     return orders.filter(
-      (order) => order.billingDetails.email === currentUser.email,
+      (order) => order.id === currentUser.id,
     );
   } catch (err) {
     console.error("Error parsing orders from storage", err);
     return [];
   }
 }
+

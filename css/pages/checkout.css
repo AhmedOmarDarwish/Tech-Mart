@@ -45,7 +45,7 @@
 
 .progress-step.active .step-number {
   background: var(--color-primary);
-  color: white;
+  color: var(--text-inverse);
 }
 
 .step-label {
@@ -218,7 +218,7 @@
   width: 100%;
   padding: var(--space-md) var(--space-lg);
   background: var(--color-primary);
-  color: white;
+  color: var(--text-inverse);
   border: none;
   border-radius: 6px;
   font-size: var(--font-size-base);
@@ -295,7 +295,7 @@
   height: 60px;
   object-fit: cover;
   border-radius: 4px;
-  background: white;
+  background: var(--color-bg);
   border: 1px solid var(--color-border);
 }
 
@@ -425,7 +425,7 @@
 
 .modal {
   position: fixed;
-  top: 0;
+  top: 80px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -443,7 +443,7 @@
 }
 
 .modal-content {
-  background: white;
+  background: var(--color-bg);
   padding: var(--space-xl);
   border-radius: 8px;
   text-align: center;
@@ -493,7 +493,7 @@
 .btn-primary {
   padding: var(--space-md) var(--space-lg);
   background: var(--color-primary);
-  color: white;
+  color: var(--text-inverse);
   border: none;
   border-radius: 6px;
   font-size: var(--font-size-base);
@@ -580,5 +580,51 @@
     min-width: 80%;
     margin: var(--space-md);
     padding: var(--space-lg);
+  }
+}
+
+/* Toast notification (theme-aware) */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  color: var(--text-inverse);
+  border-radius: 4px;
+  z-index: 2000;
+  animation: slideIn 0.3s ease;
+}
+
+.notification--success {
+  background: var(--color-primary);
+}
+
+.notification--error {
+  background: var(--color-discount);
+}
+
+.notification--info {
+  background: var(--color-bucket-btn-hover);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
   }
 }

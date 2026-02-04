@@ -37,7 +37,7 @@
 }
 
 .login-right p {
-  color: #888;
+  color: var(--color-text-muted);
   margin-bottom: 25px;
   font-size: 14px;
 }
@@ -57,7 +57,7 @@
 .login-form input {
   width: 100%;
   padding: 12px  60px  12px 14px; 
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   font-size: 14px;
 }
@@ -70,7 +70,7 @@
   display: block;
   margin-bottom: 20px;
   font-size: 12px;
-  color: #888;
+  color: var(--color-text-muted);
   text-decoration: none;
 }
 
@@ -82,9 +82,9 @@
 .btn-login {
   width: 100%;
   padding: 12px;
-  background-color: #28a745;
+  background-color: var(--color-primary);
   border: none;
-  color: white;
+  color: var(--text-inverse);
   font-weight: 600;
   font-size: 16px;
   border-radius: 8px;
@@ -102,11 +102,11 @@
   margin-top: 15px;
   font-size: 13px;
   text-align: center;
-  color: #888;
+  color: var(--color-text-muted);
 }
 
 .login-link a {
-  color: #28a745;
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
 }

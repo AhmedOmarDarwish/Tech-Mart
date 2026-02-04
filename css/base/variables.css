@@ -17,6 +17,8 @@
   --color-text-strong: #000000;
   --color-text-muted: #777777;
   --color-text-light: #aaaaaa;
+  --color-text-white: #ffffff;
+  --color-text-toggle: #000000;
 
   /*Discount*/
   --color-before-discount: var(--color-text-muted);
@@ -33,6 +35,20 @@
 
   /* Borders */
   --color-border: #e0e0e0;
+
+  /* Semantic aliases (theme-aware) */
+  --bg-main: var(--background-color);
+  --bg-card: var(--color-bg);
+  --bg-card-muted: var(--color-bg-muted);
+  --text-primary: var(--color-text);
+  --text-secondary: var(--color-text-muted);
+  --text-inverse: #ffffff;
+  --border-color: var(--color-border);
+
+  /* Validation / feedback (for forms, notifications) */
+  --color-error: #e63946;
+  --color-warning: #f4a261;
+  --color-success: #2a9d8f;
 
   /* Fonts */
   --font-main: "Inter", Arial, sans-serif;
@@ -64,6 +80,33 @@
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --background-color: #1a1a1a;
+  --color-bg: #2d2d2d;
+  --color-bg-muted: #252525;
+  --color-bg-soft: #1f1f1f;
+  --color-bg-gray: #3a3a3a;
+
+  --color-text: var(--color-primary);
+  --color-text-strong: var(--color-primary);
+  --color-text-muted: var(--color-primary-hover);
+  --color-text-light: var(--color-primary-hover);
+  --color-text-white: #ffffff;
+  --color-text-toggle: #ffffff;
+
+
+  --color-border: #404040;
+
+  --bg-main: var(--background-color);
+  --bg-card: var(--color-bg);
+  --bg-card-muted: var(--color-bg-muted);
+  --text-primary: var(--color-text);
+  --text-secondary: var(--color-text-muted);
+  --text-inverse: var(--color-primary);
+  --border-color: var(--color-border);
 }
 
 /* Regular / Variable weight */
