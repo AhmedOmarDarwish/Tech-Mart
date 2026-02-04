@@ -11,11 +11,18 @@
   --color-bg-muted: #f5f6f8;
   --color-bg-soft: #f0f1f3;
   --color-bg-gray: #E2E4EB;
+
   /* Text Colors */
   --color-text: #222222;
   --color-text-strong: #000000;
   --color-text-muted: #777777;
   --color-text-light: #aaaaaa;
+
+  /*Discount*/
+  --color-before-discount: var(--color-text-muted);
+  --color-after-discount: var(--color-primary);
+  --color-discount: #FF1010;
+
   /*Button*/
   --color-card-btn: var(--color-primary);
   --color-card-btn-hover: var(--color-primary-hover);
