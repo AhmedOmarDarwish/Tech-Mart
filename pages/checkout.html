@@ -2,64 +2,242 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - Tech Mart</title>
+  <link
+      rel="icon"
+      href="../assets/images/logo/logo.svg"
+      type="image/x-icon"
+    />
   <link rel="stylesheet" href="../css/pages/checkout.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+
 </head>
 <body>
-<div class="checkout">
+  
+  <!-- Header -->
+    <div id="header"></div>
 
-  <div class="left">
-    <h2>Billing Details</h2>
-
-    <form id="checkoutForm">
-      <div class="row">
-        <input type="text" name="firstName" placeholder="First Name" required />
-        <input type="text" name="lastName" placeholder="Last Name" required />
+  <!-- Main Checkout Section -->
+  <main class="checkout-container">
+    <div class="checkout-wrapper">
+      <!-- Progress Indicator -->
+      <div class="checkout-progress">
+        <div class="progress-step active">
+          <span class="step-number">1</span>
+          <span class="step-label">Cart</span>
+        </div>
+        <div class="progress-connector"></div>
+        <div class="progress-step active">
+          <span class="step-number">2</span>
+          <span class="step-label">Billing</span>
+        </div>
+        <div class="progress-connector"></div>
+        <div class="progress-step">
+          <span class="step-number">3</span>
+          <span class="step-label">Payment</span>
+        </div>
       </div>
 
-      <input type="text" name="company" placeholder="Company Name (Optional)" />
+      <div class="checkout-content">
+        <!-- Left: Billing Details Form -->
+        <section class="checkout-form-section">
+          <h2>Billing Address</h2>
 
-      <select name="country" required>
-        <option value="">Country</option>
-        <option value="US">United States</option>
-        <option value="EG">Egypt</option>
-      </select>
+          <form id="checkoutForm" class="checkout-form">
+            <!-- Personal Information -->
+            <fieldset class="form-group">
+              <legend>Personal Information</legend>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" required />
+                </div>
+                <div class="form-field">
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" required />
+                </div>
+              </div>
 
-      <input type="text" name="address" placeholder="Street Address" required />
-      <input type="text" name="city" placeholder="City" required />
+              <div class="form-field">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
 
-      <input type="text" name="state" placeholder="State" required />
-      <input type="text" name="zip" placeholder="Zip Code" required />
+              <div class="form-field">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+            </fieldset>
 
-      <input type="tel" name="phone" placeholder="Phone Number" required />
-      <input type="email" name="email" placeholder="Email Address" required />
+            <!-- Address Information -->
+            <fieldset class="form-group">
+              <legend>Address</legend>
+              <div class="form-field">
+                <label for="company">Company Name (Optional)</label>
+                <input type="text" id="company" name="company" />
+              </div>
 
-      <textarea name="notes" placeholder="Order notes (optional)"></textarea>
+              <div class="form-field">
+                <label for="address">Street Address *</label>
+                <input type="text" id="address" name="address" required />
+              </div>
 
-      <h3>Payment Method</h3>
-      <label>
-        <input type="radio" name="payment" value="bank" checked />
-        Direct Bank Transfer
-      </label>
-      <label>
-        <input type="radio" name="payment" value="cash" />
-        Cash on Delivery
-      </label>
-      <label>
-        <input type="radio" name="payment" value="paypal" />
-        PayPal
-      </label>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="city">City *</label>
+                  <input type="text" id="city" name="city" required />
+                </div>
+                <div class="form-field">
+                  <label for="state">State/Province *</label>
+                  <input type="text" id="state" name="state" required />
+                </div>
+              </div>
 
-      <button type="submit">Place Order</button>
-    </form>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="zip">Zip/Postal Code *</label>
+                  <input type="text" id="zip" name="zip" required />
+                </div>
+                <div class="form-field">
+                  <label for="country">Country *</label>
+                  <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="EG">Egypt</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="UK">United Kingdom</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Additional Information -->
+            <fieldset class="form-group">
+              <legend>Additional Information</legend>
+              <div class="form-field">
+                <label for="notes">Order Notes (Optional)</label>
+                <textarea id="notes" name="notes" placeholder="Any special requests or notes for your order..."></textarea>
+              </div>
+            </fieldset>
+
+            <!-- Payment Method -->
+            <fieldset class="form-group">
+              <legend>Payment Method</legend>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="bank" checked />
+                  <span class="payment-label">
+                    <span class="payment-icon">🏦</span>
+                    <span>Direct Bank Transfer</span>
+                  </span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="cash" />
+                  <span class="payment-label">
+                    <span class="payment-icon">💵</span>
+                    <span>Cash on Delivery</span>
+                  </span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="card" />
+                  <span class="payment-label">
+                    <span class="payment-icon">💳</span>
+                    <span>Credit/Debit Card</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn-place-order">Place Order</button>
+          </form>
+        </section>
+
+        <!-- Right: Order Summary -->
+        <aside class="checkout-summary-section">
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+
+            <!-- Cart Items -->
+            <div class="summary-items" id="summaryItems">
+              <p class="empty-message">Your cart is empty</p>
+            </div>
+
+            <!-- Divider -->
+            <hr class="summary-divider" />
+
+            <!-- Summary Details -->
+            <div class="summary-details">
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Shipping</span>
+                <span id="shipping">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Tax</span>
+                <span id="tax">$0.00</span>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="summary-divider" />
+
+            <!-- Total -->
+            <div class="summary-total">
+              <span>Total</span>
+              <span id="total">$0.00</span>
+            </div>
+
+            <!-- Promo Code (Optional) -->
+            <div class="promo-section">
+              <input 
+                type="text" 
+                id="promoCode" 
+                placeholder="Enter promo code"
+                class="promo-input"
+              />
+              <button type="button" class="btn-apply-promo">Apply</button>
+            </div>
+
+            <!-- Continue Shopping Link -->
+            <a href="../pages/product.html" class="continue-shopping">← Continue Shopping</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+ 
+
+  <!-- Loading Modal -->
+  <div id="loadingModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="spinner"></div>
+      <p>Processing your order...</p>
+    </div>
   </div>
 
-  <div class="right">
-    <h2>Your Order</h2>
-    <div id="orderSummary"></div>
+  <!-- Success Modal -->
+  <div id="successModal" class="modal hidden">
+    <div class="modal-content success">
+      <div class="success-icon">✓</div>
+      <h3>Order Placed Successfully!</h3>
+      <p id="successMessage">Your order has been confirmed.</p>
+      <button class="btn-primary" onclick="window.location.href='../pages/product.html'">
+        Continue Shopping
+      </button>
+    </div>
   </div>
 
-</div>
-<script src="../js/pages/checkout.js"></script>
+  <!-- Footer -->
+    <div id="footer"></div>
+  <script src="/js/pages/checkout.js" type="module"></script>
+      <script type="module" src="/js/main.js"></script>
+
 </body>
 </html>
