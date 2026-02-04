@@ -1,10 +1,9 @@
 /* Footer Container */
 footer {
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-soft);
     border-top: 1px solid var(--color-border);
-        flex-wrap: wrap;
-
-
+    flex-wrap: wrap;
+    margin-top: 60px;
 }
 
 .footer__container {
@@ -133,10 +132,10 @@ footer {
 /* Newsletter Section */
 
 .footer__newsletter {
-    background-color: var(--color-bg-soft);
+    background-color: var(--color-bg);
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
-    padding: 30px 20px;
+    padding: 0 20px;
 }
 
 .footer__container--newsletter {
@@ -244,7 +243,7 @@ footer {
 
 /* Bottom Section */
 .footer__bottom {
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-soft);
 }
 
 .footer__copyright {

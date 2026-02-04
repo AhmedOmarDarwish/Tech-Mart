@@ -2,7 +2,7 @@
 
 .header {
   width: 100%;
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-soft);
   position: relative;
 }
 
@@ -78,7 +78,7 @@
 
 /* Hotline Button - Responsive */
 .hotline-btn {
-  background: var(--color-bg-soft);
+  background: var(--color-bg);
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius-sm);
   color: var(--color-text);
@@ -518,7 +518,7 @@
   right: -5px;
   top: -8px;
   background-color: var(--color-primary);
-  color: var(--text-inverse);
+  color: var(--color-text-white);
   font-size: 10px;
   font-weight: 500;
   border-radius: 50%;
@@ -714,6 +714,15 @@
   flex: 1;
 }
 
+.search-category-wrapper input {
+  background-color: var(--color-bg-muted);
+  border-radius: var(--radius-xxl);
+}
+
+.search-category-wrapper input:hover {
+  background-color: var(--color-bg-soft);
+}
+
 @media (min-width: 768px) {
   .search-category-wrapper {
     padding: 0.4rem 1rem;
@@ -856,6 +865,7 @@
 
 .promo-texts span {
   font-size: var(--font-size-xs);
+  color: var(--color-text-white);
   letter-spacing: 0.3px;
 }
 
@@ -966,8 +976,10 @@
   cursor: pointer;
   color: var(--color-text);
   transition: all 0.3s ease;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xxl);
+  margin-bottom: 5px;
   font-size: var(--font-size-sm);
+  background-color: var(--color-bg-soft);
 }
 
 @media (min-width: 768px) {

@@ -627,8 +627,8 @@
 /* ------------------------------------------------------------ */
 .container__setproducts {
   max-width: 1400px;
-  margin: 0 auto;
-  background: var(--color-bg);
+  margin: 0 auto 20px auto;
+  background: var(--color-bg-soft);
   padding: var(--space-xl) var(--space-lg);
   border-radius: var(--radius-lg);
 }
@@ -887,7 +887,7 @@
   max-width: 1400px;
   margin: 0 auto var(--space-lg) auto;
   padding: var(--space-lg);
-  background-color: var(--color-bg-muted);
+  background-color: var(--color-bg-soft);
   font-family: var(--font-main);
   border-radius: var(--radius-xxl);
 }
@@ -960,7 +960,7 @@
 
 .banner-content .sell,
 .banner-content .start {
-  color: var(--color-bg);
+  color: var(--color-text-strong);
 }
 
 .banner-content .sell span {
@@ -986,7 +986,7 @@
 }
 
 .banner-content a:hover {
-  background-color: var(--color-bg-muted);
+  background-color: var(--color-primary-hover);
 }
 
 .categories {
@@ -1031,7 +1031,7 @@
 .category__name {
   font-size: 12px;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-text-strong);
   margin: 0;
 }
 
@@ -1202,8 +1202,10 @@
 /* ===== BRAND NEW SECTION ===== */
 .brandnew-section {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   padding: var(--space-lg);
+  background-color: var(--color-bg-soft);
+  border-radius: var(--radius-xxl);
 }
 
 /* Section Header */
@@ -1337,9 +1339,10 @@
 /* ===== CATEGORIES SHOWCASE SECTION ===== */
 .categories-showcase {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   padding: var(--space-lg);
-  background-color: var(--color-bg-muted);
+  background-color: var(--color-bg-soft);
+  border-radius: var(--radius-xxl);
 }
 
 .categories-showcase__grid {
@@ -1483,6 +1486,9 @@
   display: grid;
   grid-template-columns: 1fr 280px;
   gap: var(--space-lg);
+  background-color: var(--color-bg-soft);
+  padding: var(--space-lg);
+  border-radius: var(--radius-xxl);
 }
 
 /* ===== MAIN DEALS CARD ===== */
@@ -1501,9 +1507,9 @@
 }
 
 .deals-main__title {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text-inverse);
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--color-text-strong);
   margin: 0;
   letter-spacing: 1px;
 }
