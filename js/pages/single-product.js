@@ -294,7 +294,7 @@ class ProductSection {
     <p class="single-product__info-description">${this.product.description}</p>
     <hr>
     <p class="single-product__info-features"><strong>features:</strong>
-    <ul style="list-style-type:disc">${features}</ul></p>`;
+    <ul class="single-product__info-features-list">${features}</ul></p>`;
     this.elements.productInfo.innerHTML += `<h6>CATEGORY: ${this.product.tags[0]}</h6>
     <h6>Brand: ${this.product.brand}</h6>`;
   }
@@ -423,7 +423,7 @@ class ProductSection {
       .forEach((item) => {
         item.remove();
       });
-    this.elements.purchaseTitle.textContent = `Cart subtotal: ${getCartSubTotal()} $`;
+    this.elements.purchaseTitle.textContent = `Cart subtotal: ${getCartSubTotal()}`;
     this.elements.addToCartBtn.remove();
     this.elements.goToBasketBtn.style.display = "block";
     this.elements.purchaseBtnsContainer.classList.add("added_to_cart");
@@ -880,7 +880,7 @@ class FrequencySection
         try{
           const titleEl = this.elements.frequencyPurchaseContainer.querySelector('.single-product__purchase-title');
           titleEl.classList.add('added_to_cart');
-          titleEl.textContent = `Cart subtotal: ${getCartSubTotal()} $`;
+          titleEl.textContent = `Cart subtotal: ${getCartSubTotal()}`;
           addBtn.style.display = 'none';
           if(goToBasketBtn) goToBasketBtn.style.display = 'block';
           this.elements.frequencyPurchaseBtnsContainer?.classList.add('added_to_cart');
@@ -1018,6 +1018,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
   }catch(error){
     console.log('Page initialization error:',error);
-    document.body.innerHTML = `<div class="error-container" style="text-align: center;margin:10px auto;"><h1 style="color:red">Error Loading Product</h1><p>${error.message}</p></div>`
+    document.body.innerHTML = `<div class="error-container error-container--page"><h1>Error Loading Product</h1><p>${error.message}</p></div>`
   }
 });

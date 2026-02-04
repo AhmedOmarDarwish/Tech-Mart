@@ -84,6 +84,19 @@ export const initHeader = async () => {
     search(query, categoryId);
   });
 
+  // Theme toggle (dark/light)
+  const themeToggle = document.querySelector("[data-theme-toggle]");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      const current =
+        document.documentElement.getAttribute("data-theme") || "light";
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+  }
+
   await initSearch();
 };
 

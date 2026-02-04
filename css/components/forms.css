@@ -1,20 +1,20 @@
 .error-message {
-  color: #ff0000 !important;
+  color: var(--color-error) !important;
   font-size: 0.9rem;
   font-weight: 500;
   margin-top: 5px;
 }
 
 .weak {
-  border: 2px solid #e63946;
+  border: 2px solid var(--color-error);
 }
 
 .medium {
-  border: 2px solid #f4a261;
+  border: 2px solid var(--color-warning);
 }
 
 .strong {
-  border: 2px solid #2a9d8f;
+  border: 2px solid var(--color-success);
 }
 
 #passwordStrength {
@@ -24,15 +24,15 @@
 }
 
 .strength-weak {
-  color: #e63946;
+  color: var(--color-error);
 }
 
 .strength-medium {
-  color: #f4a261;
+  color: var(--color-warning);
 }
 
 .strength-strong {
-  color: #2a9d8f;
+  color: var(--color-success);
 }
 
 /* Toggle password */
@@ -66,5 +66,5 @@ input.valid {
 }
 
 input.invalid {
-  border-color: #ff0000 !important;
+  border-color: var(--color-error) !important;
 }
