@@ -23,7 +23,7 @@ body
 /* Main Product Layout */
 .single-product__main
 {
-    background-color: white;
+    background-color: var(--color-bg);
     display: flex;
     flex-direction: row;
     padding: 5vw 0;
@@ -45,8 +45,8 @@ body
     width: auto;
     min-width:1vw;
     margin: 0 2vw;
-    color:white;
-    background-color: black;
+    color: var(--text-inverse);
+    background-color: var(--color-text-strong);
     border-radius: 10px;
     visibility: hidden;
     position: absolute;
@@ -130,6 +130,10 @@ body
   margin: 0.5em 0;
 }
 
+.single-product__info-features-list {
+  list-style-type: disc;
+}
+
 
 .single-product__purchase
 {
@@ -137,20 +141,20 @@ body
     padding: 0 2vw;
     background-color: var(--color-bg-gray);
     border-radius: 15px;
-    color: #666666;
+    color: var(--color-text-muted);
     transition: all 0.5s ease;
 }
 
 .single-product__purchase-title
 {
-    color: #666666;
+    color: var(--color-text-muted);
     margin: 2em 0;
    transition: all 0.5s ease;
 }
 
 .single-product__purchase-price
 {
-    color: black;
+    color: var(--color-text-strong);
     display: block;
     font-weight: bold;
 }
@@ -161,8 +165,8 @@ body
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: white;
-    color: black;
+    background-color: var(--color-bg);
+    color: var(--color-text-strong);
     padding: 0.5em;
     align-items: center;
     transition: all 0.5 ease-in-out;
@@ -220,7 +224,7 @@ body
 .single-product__add-btn
 {
     width: 100%;
-    color: white;
+    color: var(--text-inverse);
     background-color: var(--color-card-btn);
     font-size: 1em;
     transition: background-color 0.3s ease-in-out;
@@ -232,7 +236,7 @@ body
 .single-product__basket-btn
 {
     width: 100%;
-    color: white;
+    color: var(--text-inverse);
     background-color: var(--color-bucket-btn);
     font-size: 1em;
     transition: background-color 0.3s ease-in-out;
@@ -246,7 +250,7 @@ body
 .single-product__buy-now-btn
 {
     width: 100%;
-    color: white;
+    color: var(--text-inverse);
     background-color: var(--color-buy-now-btn);
     font-size: 1em;
     transition: background-color 0.3s ease-in-out;
@@ -378,7 +382,7 @@ body
 .single-product__reviews
 {
     width: 85vw;
-    background-color: white;
+    background-color: var(--color-bg);
     margin: 10px auto;
     border-radius: 25px;
 }
@@ -485,7 +489,7 @@ body
     padding-right: 0.4em;
 }
 .review__star {
-  color: #ccc; /* The "empty" color (background) */
+  color: var(--color-text-light);
   position: relative;
   display: inline-block;
 }
@@ -494,9 +498,9 @@ body
   position: absolute;
   top: 0;
   left: 0;
-  width: var(--percent); /* This is where the 30% magic happens */
+  width: var(--percent);
   overflow: hidden;
-  color: #ffcc00; /* The "gold" color */
+  color: var(--color-after-discount, #ffcc00);
 }
 
 
@@ -634,4 +638,17 @@ body
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+/* Error container (e.g. product load failure) */
+.error-container--page {
+  text-align: center;
+  margin: 10px auto;
+  padding: var(--space-lg);
+  color: var(--color-text);
+}
+
+.error-container--page h1 {
+  color: var(--color-error);
+  margin-bottom: var(--space-sm);
 }

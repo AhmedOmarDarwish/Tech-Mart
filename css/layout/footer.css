@@ -167,7 +167,7 @@ footer {
 }
 
 .newsletter__highlight {
-    color: red;
+    color: var(--color-discount);
 }
 
 .newsletter__form {
@@ -196,7 +196,7 @@ footer {
 .newsletter__button {
     padding: 12px 30px;
     background: none;
-    color: #00b050;
+    color: var(--color-primary);
     border: 1px solid transparent;
     border-bottom: 1px solid var(--color-border);
     font-size: var(--font-size-sm);
@@ -239,7 +239,7 @@ footer {
     border-radius: var(--radius-sm);
     font-size: 13px;
     cursor: pointer;
-    background-color: white;
+    background-color: var(--color-bg);
 }
 
 /* Bottom Section */
@@ -252,7 +252,7 @@ footer {
     color: var(--color-text-muted);
 }
 .footer__copyright strong {
-    color: black;
+    color: var(--color-text-strong);
 }
 
 .footer__payments {
@@ -268,7 +268,7 @@ footer {
 
 .footer__mobile-link {
     font-size: 13px;
-    color: blue;
+    color: var(--color-primary);
     text-decoration: none;
 }
 

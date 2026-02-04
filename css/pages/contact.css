@@ -6,8 +6,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: var(--bg-main);
+            color: var(--color-text);
             line-height: 1.6;
         }
 
@@ -19,7 +19,7 @@
         }
 
         .contact-box {
-            background: white;
+            background: var(--color-bg);
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             overflow: hidden;
@@ -27,18 +27,18 @@
 
         .contact-title-area {
             padding: 40px;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid var(--color-border);
         }
 
         .contact-title-area h2 {
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 10px;
-            color: #222;
+            color: var(--color-text-strong);
         }
 
         .contact-title-area p {
-            color: #666;
+            color: var(--color-text-muted);
             font-size: 15px;
         }
 
@@ -121,7 +121,7 @@
         }
 
         .terms-group .terms-link {
-            color: #4CAF50;
+            color: var(--color-primary);
             text-decoration: none;
         }
 
@@ -130,8 +130,8 @@
         }
 
         .submit-button {
-            background: #4CAF50;
-            color: white;
+            background: var(--color-primary);
+            color: var(--text-inverse);
             padding: 14px 35px;
             border: none;
             border-radius: 4px;
@@ -144,11 +144,11 @@
         }
 
         .submit-button:hover {
-            background: #45a049;
+            background: var(--color-primary-hover);
         }
 
         .contact-info-area {
-            background: #f8f8f8;
+            background: var(--color-bg-muted);
             padding: 40px;
             display: flex;
             flex-direction: column;
@@ -175,7 +175,7 @@
         .office-content h3 {
             font-size: 14px;
             font-weight: 600;
-            color: #333;
+            color: var(--color-text);
             margin-top: 15px;
             margin-bottom: 8px;
             text-transform: capitalize;
@@ -187,12 +187,12 @@
 
         .office-content p {
             margin-bottom: 8px;
-            color: #333;
+            color: var(--color-text);
             font-size: 14px;
         }
 
         .office-content .office-email {
-            color: #4CAF50;
+            color: var(--color-primary);
             text-decoration: none;
             display: block;
             margin-top: 5px;
@@ -212,19 +212,19 @@
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            background: white;
+            background: var(--color-bg);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #333;
+            color: var(--color-text);
             text-decoration: none;
             transition: all 0.3s;
             font-size: 16px;
         }
 
         .social-icons .social-link:hover {
-            background: #4CAF50;
-            color: white;
+            background: var(--color-primary);
+            color: var(--text-inverse);
         }
 
           .laptop-visual {
@@ -252,7 +252,7 @@
 
         .map-wrapper {
             margin-top: 60px;
-            background: white;
+            background: var(--color-bg);
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             overflow: hidden;
@@ -260,19 +260,19 @@
 
         .map-title-area {
             padding: 30px 40px;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid var(--color-border);
         }
 
         .map-title-area h3 {
             font-size: 22px;
             font-weight: 600;
-            color: #222;
+            color: var(--color-text-strong);
         }
 
         .map-embed {
             width: 100%;
             height: 400px;
-            background: #e8e8e8;
+            background: var(--color-bg-soft);
             position: relative;
         }
 

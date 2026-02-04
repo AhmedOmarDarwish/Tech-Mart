@@ -117,7 +117,7 @@
 .separator {
   width: 1px;
   height: 16px;
-  background-color: var(--color-border, #ddd);
+  background-color: var(--color-border);
 }
 
 @media (min-width: 768px) {
@@ -296,7 +296,7 @@
   text-decoration: none;
   font-size: var(--font-size-sm);
   font-weight: 500;
-  color: var(--color-text, #000);
+  color: var(--color-text);
   transition: color 0.3s ease;
   white-space: nowrap;
 }
@@ -518,7 +518,7 @@
   right: -5px;
   top: -8px;
   background-color: var(--color-primary);
-  color: white;
+  color: var(--text-inverse);
   font-size: 10px;
   font-weight: 500;
   border-radius: 50%;
@@ -573,7 +573,7 @@
   right: 0;
   min-width: 120px;
   width: 100%;
-  background: #fff;
+  background: var(--color-bg);
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   padding: 6px 0;
@@ -595,14 +595,14 @@
   border: none;
   text-align: left;
   cursor: pointer;
-  color: #333;
+  color: var(--color-text);
   text-decoration: none;
   font-size: 14px;
 }
 
 .profile-menu li a:hover,
 .profile-menu li button:hover {
-  background: #f3f4f6;
+  background: var(--color-bg-soft);
 }
 
 .hidden {
@@ -665,7 +665,7 @@
 .bottom-header {
   background-color: var(--color-primary);
   padding: var(--space-sm) 0;
-  color: white;
+  color: var(--text-inverse);
   border-radius: 0;
   -webkit-overflow-scrolling: touch;
 }
@@ -705,7 +705,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: var(--color-bg);
   padding: 0.35rem 0.75rem;
   border-radius: 20px;
   width: 100%;
@@ -735,10 +735,10 @@
   background: transparent;
   font-weight: 700;
   font-size: var(--font-size-xs);
-  color: #333;
+  color: var(--color-text);
   padding-right: 0.5rem;
   margin-right: 0.5rem;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid var(--color-border);
   cursor: pointer;
   outline: none;
   flex-shrink: 0;
@@ -794,7 +794,7 @@
   border: none;
   cursor: pointer;
   font-size: 14px;
-  color: #333;
+  color: var(--color-text);
   padding: 0 0.25rem;
   display: flex;
   align-items: center;
@@ -910,7 +910,7 @@
   width: 100%;
   max-height: 60vh;
   height: auto;
-  background: #fff;
+  background: var(--color-bg);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   border-radius: var(--radius-md);
   padding: var(--space-md);
@@ -944,7 +944,7 @@
 
 .section h4 {
   font-size: var(--font-size-sm);
-  color: #000000;
+  color: var(--color-text-strong);
   margin-bottom: var(--space-xs);
 }
 
@@ -964,7 +964,7 @@
 .suggestions li {
   padding: var(--space-sm);
   cursor: pointer;
-  color: #333;
+  color: var(--color-text);
   transition: all 0.3s ease;
   border-radius: var(--radius-sm);
   font-size: var(--font-size-sm);
@@ -995,7 +995,7 @@
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-xs);
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-border);
   transition: background-color 0.2s ease;
 }
 
@@ -1007,7 +1007,7 @@
 }
 
 .search-result-item:hover {
-  background-color: var(--color-bg-soft, #f5f5f5);
+  background-color: var(--color-bg-soft);
 }
 
 .result-image {
@@ -1050,7 +1050,7 @@
 
 .result-brand {
   font-size: 11px;
-  color: #555;
+  color: var(--color-text-muted);
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1065,7 +1065,7 @@
 
 .result-price {
   font-size: var(--font-size-xs);
-  color: #000;
+  color: var(--color-text-strong);
   margin: 0;
   font-weight: bold;
   flex-shrink: 0;
@@ -1100,7 +1100,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--color-text, #000);
+  background-color: var(--color-text);
   transition: all 0.3s ease;
 }
 
