@@ -2,12 +2,17 @@ import APP_CONFIG from "../core/config.js";
 import * as storage from "../core/storage.js";
 
 const CART_KEY = APP_CONFIG.storageKeys.cart;
+const BUY_NOW_KEY = APP_CONFIG.storageKeys.buyNow;
 
 // Get current cart from storage
 export const getCart = () => {
   const cart = storage.get(CART_KEY);
   return Array.isArray(cart) ? cart : [];
 };
+export const getBuyNow = () => {
+  const buyNow = storage.get(BUY_NOW_KEY);    
+  return Array.isArray(buyNow) ? buyNow : [];
+}
 
 // Save cart to storage
 const saveCart = (cart) => {

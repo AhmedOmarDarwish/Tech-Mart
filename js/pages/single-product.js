@@ -54,6 +54,7 @@ function getCartSubTotal() {
 
 function updateBuyNow(itemsToMerge){  
   localStorage.setItem('buyNow', JSON.stringify(itemsToMerge));
+  
   // redirect to checkout
   const url = new URL('../pages/checkout.html', window.location.origin);
   url.searchParams.set('buyNow', 'true');
@@ -345,17 +346,18 @@ class ProductSection {
     /**buy now button event listeners */
     const buyNowBtn = this.elements.buyNowBtn;
     buyNowBtn.addEventListener("click", () => {
-      if(localStorage.getItem("current_user")){        
+      if(localStorage.getItem("current_user")){
+        const quantity = Number(this.elements.quantity.textContent);                
         const item = new CartItem(
           this.productId,
           this.product.name,
           Number(this.product.price),
-          1,
-          Number(this.product.price),
+          quantity,
+          Number(this.product.price * quantity),
           this.product.thumbnail,
           this.product.description
         )
-        updateBuyNow(item);
+        updateBuyNow([item]);
       }else{
         window.location.href = "/../../pages/login.html";
       }
@@ -644,9 +646,9 @@ class FrequencySection
     }
   }
 
-  subCatFreqSuggestions()
+  subCatFreqSuggestions(subCat_filtered = null)
   {
-    const arrayOfSuggestions = ["subcat-010","subcat-016","subcat-017"];
+    const arrayOfSuggestions = ["subcat-010","subcat-016","subcat-017"].filter(item => item !== subCat_filtered);
     return arrayOfSuggestions[this.generateRandomNumber(0,arrayOfSuggestions.length-1)];
   }
 
@@ -670,10 +672,14 @@ class FrequencySection
 
   async fetchSubProducts(){
     try{
-      let productBySub_1 = await getProductsBySubcategory(this.subCatFreqSuggestions());
-      this.Items.push(productBySub_1[this.generateRandomNumber(0,productBySub_1.length-1)]);
-      let productBySub_2 = await getProductsBySubcategory(this.subCatFreqSuggestions());
-      this.Items.push(productBySub_2[this.generateRandomNumber(0,productBySub_2.length-1)]);
+      let SubCat_1 = this.subCatFreqSuggestions();
+      let listOfProducts_SubCat_1 = await getProductsBySubcategory(SubCat_1);
+      const firstItem = listOfProducts_SubCat_1[this.generateRandomNumber(0,listOfProducts_SubCat_1.length-1)];
+      this.Items.push(firstItem);
+
+      let listOfProducts_SubCat_2 = await getProductsBySubcategory(this.subCatFreqSuggestions(SubCat_1));
+      const secondItem = listOfProducts_SubCat_2[this.generateRandomNumber(0,listOfProducts_SubCat_2.length-1)];
+      this.Items.push(secondItem);
     }catch(error){
       console.error('FrequencySection Error:',error);
     }
