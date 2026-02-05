@@ -368,6 +368,8 @@
   display: flex;
   gap: var(--space-sm);
   margin: var(--space-md) 0;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .promo-input {
@@ -378,6 +380,15 @@
   font-size: var(--font-size-sm);
 }
 
+/* Allow input to shrink so buttons stay inside the summary on small screens */
+.promo-input {
+  min-width: 0;
+}
+.promo-section button {
+  flex: none;
+  white-space: nowrap;
+}
+
 .promo-input:focus {
   outline: none;
   border-color: var(--color-primary);
@@ -385,8 +396,8 @@
 
 .btn-apply-promo {
   padding: var(--space-md) var(--space-lg);
-  background: var(--color-bg-soft);
-  color: var(--color-text-toggle);
+  background: var(--color-primary);
+  color: var(--color-text-white);
   border: 1px solid var(--color-border);
   border-radius: 6px;
   font-size: var(--font-size-sm);
@@ -396,8 +407,33 @@
 }
 
 .btn-apply-promo:hover {
-  background: var(--color-bg-gray);
+  background: var(--color-primary-hover);
+  font-weight: bolder;
   border-color: var(--color-primary);
+}
+
+#clearPromoBtnCheckout{
+  background-color: #dc2626;
+  color:var(--color-text-white);
+  padding: var(--space-md) var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#save , #savei{
+  color: var(--color-primary);
+  font-weight: bolder;
+}
+
+
+#clearPromoBtnCheckout:hover{
+  font-weight: bolder;
+  transform: scale(1.02);
+  transition: transform 0.35 ease-in-out;
 }
 
 /* ===== CONTINUE SHOPPING LINK ===== */
@@ -495,7 +531,7 @@
 .btn-primary {
   padding: var(--space-md) var(--space-lg);
   background: var(--color-primary);
-  color: var(--text-inverse);
+  color: var(--color-text-white);
   border: none;
   border-radius: 6px;
   font-size: var(--font-size-base);
@@ -525,10 +561,13 @@
 
 .notification--success {
   background: var(--color-primary);
+  color: var(--color-text-white);
+
 }
 
 .notification--error {
   background: var(--color-discount);
+  color: var(--color-text-white);
 }
 
 .notification--info {

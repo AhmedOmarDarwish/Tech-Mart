@@ -1512,6 +1512,24 @@
   letter-spacing: 1px;
 }
 
+.deals__btn {
+    margin-top: var(--space-md);
+      width: fit-content;
+      padding: 14px 32px;
+      background-color: var(--color-primary);
+      color: var(--color-text-white);
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all var(--transition-base);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+.deals__btn:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 .deals-main__timer {
   display: flex;
   align-items: center;
@@ -1677,10 +1695,10 @@
 
 .badge-tag {
   padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .badge-tag--shipping {
@@ -1813,10 +1831,6 @@
    RESPONSIVE MEDIA QUERIES
    ======================================== */
 
-/* ===== LARGE SCREENS (1200px and above) ===== */
-@media (min-width: 1200px) {
-  /* Default styles already optimized for large screens */
-}
 
 /* ===== MEDIUM SCREENS (992px to 1199px) ===== */
 @media (max-width: 1199px) and (min-width: 992px) {
@@ -1882,6 +1896,10 @@
 
   .deals-main__content {
     grid-template-columns: 50px 1fr 1.5fr;
+  }
+  .deals__btn{
+    padding: 13px 28px;
+      font-size: 0.95rem;
   }
 
   .container__setproducts,
@@ -2073,7 +2091,10 @@
   .deals-main__details {
     order: 3;
   }
-
+.deals__btn{
+padding: 12px 24px;
+  font-size: 0.9rem;
+}
   .deals-sidebar {
     flex-direction: row;
   }
@@ -2453,7 +2474,10 @@
     gap: var(--space-sm);
     width: 100%;
   }
-
+.deals__btn{
+  padding: 11px 22px;
+    font-size: 0.875rem;
+}
   .timer-numbers {
     width: 100%;
     justify-content: space-between;
