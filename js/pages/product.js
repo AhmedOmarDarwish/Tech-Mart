@@ -21,6 +21,9 @@ let pageBanner;
 let bannerContent;
 let currentPage = 1;
 const productsPerPage = 12;
+const selectedBrands = getSelectedBrands();
+const selectedRatings = getSelectedRatings();
+const selectedDiscounts = getSelectedDiscounts();
 
 let cashedProducts;
 let filteredProducts = []; // store filtered results globally
@@ -69,11 +72,15 @@ export async function init() {
       break;
     case "cat-003":
       pageTitle.textContent = "Cameras & Photography";
+            pageVideo.src = "/assets/videos/canon.gif";
+      pageBanner.src = "/assets/videos/GoPro.webp";
       bannerContent.style.display = "none";
 
       break;
     case "cat-004":
       pageTitle.textContent = "Audio & Sound";
+             pageVideo.src = "/assets/videos/jbl.gif";
+             pageBanner.src = "/assets/videos/Sony.jpg";
       bannerContent.style.display = "none";
 
       break;
@@ -137,6 +144,30 @@ export async function init() {
     }
   });
   applyFilters(cashedProducts);
+
+
+resetBtn.addEventListener("click", () => {
+  console.log("✅ Reset clicked");
+
+  // 1️⃣ Uncheck all checkboxes
+  document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+    cb.checked = false;
+  });
+
+  // 2️⃣ Reset price range
+  const minInput = document.getElementById("priceMin");
+  const maxInput = document.getElementById("priceMax");
+
+  if (minInput) minInput.value = 0;
+  if (maxInput) maxInput.value = 10000;
+
+  // 3️⃣ Reset pagination
+  currentPage = 1;
+
+  // 4️⃣ Render all products again
+  filteredProducts = [...cashedProducts];
+  renderPage(filteredProducts);
+});
 }
 
 async function renderCategories() {
