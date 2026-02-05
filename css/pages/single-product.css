@@ -240,7 +240,7 @@ body
 .single-product__basket-btn
 {
     width: 100%;
-    color: var(--text-inverse);
+    color: var(--color-bg-gray);
     background-color: var(--color-bucket-btn);
     font-size: 1em;
     transition: background-color 0.3s ease-in-out;
@@ -248,7 +248,8 @@ body
 }
 .single-product__basket-btn.active:hover
 {
-    background-color: var(--color-bucket-btn-hover);
+    background-color: var(--color-primary-hover);
+    color: var(--color-text-white);
 }
 
 .single-product__buy-now-btn
