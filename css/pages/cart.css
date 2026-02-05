@@ -453,7 +453,12 @@
   background: var(--color-discount);
 }
 
-/* Responsive */
+
+/* ========================================================================== */
+/* Responsive Design */
+/* ========================================================================== */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .cart-layout {
     grid-template-columns: 1fr;
@@ -464,6 +469,7 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .cart-item {
     grid-template-columns: 80px 1fr;
@@ -486,6 +492,7 @@
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .cart-page {
     padding: 1.5rem 0;
