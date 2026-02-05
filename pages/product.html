@@ -18,30 +18,30 @@
   <body data-page="product">
     <div id="header"></div>
     <main class="product__main">
-      <nav class="product__path">
+      <!-- <nav class="product__path">
         <a href="../index.html" class="product__path-link--home">Home</a>
         <span class="product__path-separator"> / </span
         ><a class="product__path-link--shop" href="">Shop</a>
         <span class="product__path-separator"> / </span
         ><a href="" class="product__path-link--category">Products</a>
-      </nav>
+      </nav> -->
       <div class="page">
         <header class="product__header">
-          <h1 class="product__title">TOP CELLPHONES & TABLETS</h1>
+          <h1 class="product__title page-title"></h1>
         </header>
         <section class="banners">
           <div class="banner">
-            <img
+            <img 
               src="/assets/videos/Apple.gif"
               alt="banner"
-              class="banner-image"
+              class="banner-image page-video"
             />
           </div>
           <div class="banner second-banner">
             <img
               src="/assets/images/banners/main-top-cellphone/product-main-cellphone.svg"
               alt="banner"
-              class="banner-image"
+              class="banner-image page-image"
             />
             <div class="banner-content">
               <div class="banner-content__text">
@@ -209,15 +209,7 @@
               <div class="shop-sidebar__block shop-sidebar__block--brands">
                 <h4 class="shop-sidebar__block-title">By Brands</h4>
                 <ul class="shop-sidebar__brands">
-                  <li class="shop-sidebar__brand">
-                    <label class="shop-sidebar__brand-label">
-                      <input type="checkbox" class="shop-sidebar__checkbox" />
-                      <span
-                        class="shop-sidebar__brand-logo shop-sidebar__brand-logo--envato"
-                      ></span>
-                      <span class="shop-sidebar__brand-count">(14)</span>
-                    </label>
-                  </li>
+                  <!-- Add brands -->
                 </ul>
               </div>
               <div class="shop-sidebar__block shop-sidebar__block--price">
@@ -261,7 +253,7 @@
               <div class="shop-sidebar__block shop-sidebar__block--discount">
                 <h4 class="shop-sidebar__block-title">By Discount</h4>
                 <div class="shop-sidebar__block shop-sidebar__block--list">
-custom-select__trigger
+                  custom-select__trigger
                 </div>
               </div>
 
@@ -354,7 +346,7 @@ custom-select__trigger
                   </label>
                 </div>
               </div> -->
-              
+
               <!-- <div class="shop-sidebar__block shop-sidebar__block--condition">
                 <h4 class="shop-sidebar__block-title">By Conditions</h4>
                 <div class="shop-sidebar__condition-list">
@@ -408,15 +400,10 @@ custom-select__trigger
                 </div>
               </div>
             </div> -->
-            <div class="products__grid">
+            <div class="products__grid" id="productsgrid">
               <!-- Add Products -->
             </div>
-            <div class="products__pagination">
-              <button class="products__page products__page--active">1</button>
-              <button class="products__page">2</button>
-              <button class="products__page">3</button>
-              <button class="products__page">Next</button>
-            </div>
+            <div class="products__pagination"></div>
           </section>
         </section>
       </div>

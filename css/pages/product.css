@@ -19,7 +19,7 @@ body {
 }
 .page {
     max-width: 1400px;
-    margin: 0 auto var(--space-lg) auto;
+    margin: var(--space-lg) auto var(--space-lg) auto;
     padding: var(--space-lg) 24px;
     background-color: var(--color-bg);
     font-family: var(--font-main);
@@ -1049,3 +1049,12 @@ body {
 .sidebar-discount input {
   margin-right: 8px;
 } */
+
+
+.no-products-message {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 1.5rem;
+  color: #555;
+}

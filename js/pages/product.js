@@ -14,8 +14,16 @@ let ratingCounts;
 let ratingList;
 let discountList;
 let productsgrid;
+let resetBtn;
+let pageTitle;
+let pageVideo;
+let pageBanner;
+let bannerContent;
+let currentPage = 1;
+const productsPerPage = 12;
 
-let cashedProducts = [];
+let cashedProducts;
+let filteredProducts = []; // store filtered results globally
 
 export async function init() {
   console.log("Initializing product page...");
@@ -30,6 +38,11 @@ export async function init() {
   brandList = document.querySelector(".shop-sidebar__brands");
   ratingList = document.querySelector(".shop-sidebar__rating-list");
   discountList = document.querySelector(".shop-sidebar__block--list");
+  resetBtn = document.querySelector(".shop-sidebar__reset");
+  pageTitle = document.querySelector(".page-title");
+  pageVideo = document.querySelector(".page-video");
+  pageBanner = document.querySelector(".page-image");
+  bannerContent = document.querySelector(".banner-content");
 
   //   const trigger = document.querySelector(".custom-select__trigger");
   //   const options = document.querySelector(".custom-select__options");
@@ -39,6 +52,31 @@ export async function init() {
 
   if (categoryId) {
     await renderProductsByCategory(categoryId, productsgrid);
+  }
+
+  switch (categoryId) {
+    case "cat-001":
+      pageTitle.textContent = "Laptops & Computers";
+      pageVideo.src = "/assets/videos/Computers.gif";
+      pageBanner.src = "/assets/videos/asus.avif";
+      bannerContent.style.display = "none";
+      break;
+    case "cat-002":
+      pageTitle.textContent = "Smartphones & Tablets";
+      pageVideo.src = "/assets/videos/Apple.gif";
+      pageBanner.src =
+        "/assets/images/banners/main-top-cellphone/product-main-cellphone.svg";
+      break;
+    case "cat-003":
+      pageTitle.textContent = "Cameras & Photography";
+      bannerContent.style.display = "none";
+
+      break;
+    case "cat-004":
+      pageTitle.textContent = "Audio & Sound";
+      bannerContent.style.display = "none";
+
+      break;
   }
 
   rangeMin.addEventListener("input", () => {
@@ -88,25 +126,16 @@ export async function init() {
   setupCarouselButtons();
 
   //apply filters
-  document.addEventListener("change",  (e) => {
+  document.querySelector(".shop-sidebar").addEventListener("change", (e) => {
     if (
       e.target.classList.contains("brand-checkbox") ||
       e.target.classList.contains("rating-checkbox") ||
-      e.target.classList.contains("discount-checkbox")
+      e.target.classList.contains("discount-checkbox") ||
+      e.target.classList.contains("shop-sidebar__range")
     ) {
-       applyFilters(cashedProducts);
+      applyFilters(cashedProducts);
     }
   });
-
-  // price range
-  rangeMin.addEventListener("input",  () => {
-     applyFilters(cashedProducts);
-  });
-
-  rangeMax.addEventListener("input", () => {
-     applyFilters(cashedProducts);
-  });
-
   applyFilters(cashedProducts);
 }
 
@@ -138,7 +167,7 @@ async function renderCategories() {
       });
 
       const params = new URLSearchParams(window.location.search);
-      const categoryFromUrl = params.get("categoryId");
+      const categoryFromUrl = params.get("categoryId") || "cat-002";
 
       if (categoryFromUrl) {
         const activeLink = container.querySelector(
@@ -194,24 +223,6 @@ async function renderTopRatedProductsByCategory(categoryId, container) {
       "reviewCount",
     );
     topRatedProducts.slice(0, 15).forEach((product) => {
-      displayProducts(product, container);
-    });
-    setupCarouselButtons();
-  } catch (error) {
-    console.error("Error loading top rated products:", error);
-  }
-}
-
-//render top rated products
-async function renderTopProducts(query, container) {
-  if (!container) return;
-  container.innerHTML = "";
-  try {
-    //Get all products
-    const products = await productService.getAllProducts();
-    //sort products by rating
-    const topRatedProducts = await productService.sortProducts(products, query);
-    topRatedProducts.slice(0, 10).forEach((product) => {
       displayProducts(product, container);
     });
     setupCarouselButtons();
@@ -333,7 +344,7 @@ function setupFilter(products) {
       ([brand, count]) => `
     <li class="shop-sidebar__brand">
       <label class="shop-sidebar__brand-label">
-        <input type="checkbox" class="shop-sidebar__checkbox" value="${brand}">
+        <input type="checkbox" class="shop-sidebar__checkbox brand-checkbox " value="${brand}">
         <span class="shop-sidebar__brand-logo">${brand}</span>
         <span class="shop-sidebar__brand-count">(${count})</span>
       </label>
@@ -355,7 +366,7 @@ function setupFilter(products) {
       (stars) => `
     <li class="shop-sidebar__rating-item">
     <label>
-      <input type="checkbox" class="rating-checkbox" value="${stars}">
+      <input type="checkbox" class="shop-sidebar__checkbox rating-checkbox" value="${stars}">
         <span class="shop-sidebar__stars">
 
       ${`<i class="fa fa-star"></i>`.repeat(stars)}
@@ -376,51 +387,53 @@ function setupFilter(products) {
   discountList.innerHTML = `
   <div class="discount-item">
     <label>
-      <input type="checkbox" class="discount-checkbox" value="with-discount">
+      <input type="checkbox" class="shop-sidebar__checkbox discount-checkbox" value="with-discount">
       With Discount (${withDiscountCount})
     </label>
   </div>
   <div class="discount-item">
     <label>
-      <input type="checkbox" class="discount-checkbox" value="without-discount">
+      <input type="checkbox" class="shop-sidebar__checkbox discount-checkbox" value="without-discount">
       Without Discount (${withoutDiscountCount})
     </label>
   </div>
 `;
 }
 
- function  applyFilters(products) {
+function applyFilters(products) {
   const selectedBrands = getSelectedBrands();
   const selectedRatings = getSelectedRatings();
   const selectedDiscounts = getSelectedDiscounts();
+  // Price range
+  const pMin = Number(priceMin.value);
+  const pMax = Number(priceMax.value);
 
-  const filtered = products.filter((product) => {
+  filteredProducts = products.filter((product) => {
+    const brand = product.brand || "";
+    const rating = Number(product.rating) || 0;
+    const discount = Number(product.discount) || 0;
+
     const brandMatch = selectedBrands.length
-      ? selectedBrands.includes(product.brand)
+      ? selectedBrands.includes(brand)
       : true;
 
     const ratingMatch = selectedRatings.length
-      ? selectedRatings.includes(product.rating)
+      ? selectedRatings.includes(Math.round(rating))
       : true;
 
     const discountMatch =
       selectedDiscounts.length === 0 ||
-      (selectedDiscounts.includes("with") && product.discount > 0) ||
-      (selectedDiscounts.includes("without") && product.discount === 0);
+      (selectedDiscounts.includes("with-discount") && discount > 0) ||
+      (selectedDiscounts.includes("without-discount") && discount === 0);
 
-    return brandMatch && ratingMatch && discountMatch;
+    const priceMatch = product.price >= pMin && product.price <= pMax;
+
+    return brandMatch && ratingMatch && discountMatch && priceMatch;
   });
 
-  productsContainer.innerHTML = "";
-
-   displayProducts(
-    filtered,
-    productsContainer,
-    "product-card product-card--grid",
-  );
+  currentPage = 1; // reset page to 1 after filtering
+  renderPage();
 }
-
-
 
 function getSelectedBrands() {
   return Array.from(document.querySelectorAll(".brand-checkbox:checked")).map(
@@ -438,4 +451,70 @@ function getSelectedDiscounts() {
   return Array.from(
     document.querySelectorAll(".discount-checkbox:checked"),
   ).map((cb) => cb.value); // ["with"] أو ["without"]
+}
+
+// ===== PAGINATION =====
+function renderPage() {
+  const start = (currentPage - 1) * productsPerPage;
+  const end = start + productsPerPage;
+  const paginatedProducts = filteredProducts.slice(start, end);
+
+  renderProducts(paginatedProducts);
+  renderPagination();
+}
+
+// ===== RENDER PRODUCTS =====
+function renderProducts(productsToRender) {
+  productsgrid.innerHTML = "";
+
+  if (!productsToRender.length) {
+    const msg = document.createElement("div");
+    msg.textContent = "No products found";
+    msg.style.gridColumn = "1 / -1";
+    msg.style.textAlign = "center";
+    msg.style.padding = "50px 0";
+    msg.style.fontSize = "1.2rem";
+    productsgrid.appendChild(msg);
+    return;
+  }
+
+  productsToRender.forEach((product) => {
+    const card = createProductCard(product, "product-card product-card--grid");
+    productsgrid.appendChild(card);
+  });
+}
+
+// ===== RENDER PAGINATION =====
+function renderPagination() {
+  const container = document.querySelector(".products__pagination");
+  container.innerHTML = "";
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+  if (totalPages <= 1) return;
+
+  // Page numbers
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    btn.className =
+      i === currentPage
+        ? "products__page products__page--active"
+        : "products__page";
+    btn.addEventListener("click", () => {
+      currentPage = i;
+      renderPage();
+    });
+    container.appendChild(btn);
+  }
+
+  // Next button
+  if (currentPage < totalPages) {
+    const nextBtn = document.createElement("button");
+    nextBtn.textContent = "Next";
+    nextBtn.className = "products__page";
+    nextBtn.addEventListener("click", () => {
+      currentPage++;
+      renderPage();
+    });
+    container.appendChild(nextBtn);
+  }
 }
