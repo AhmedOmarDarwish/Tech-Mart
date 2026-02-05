@@ -310,7 +310,7 @@
 
 .dashboard__content a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   font-weight: bolder;
 }
 
@@ -504,7 +504,7 @@
 .categories-card img {
   width: 100%;
   height: 100px;
-  object-fit: fill;
+  object-fit: contain;
   display: block;
 }
 
@@ -697,7 +697,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--color-primary);
   border: none;
   width: 50px;
   height: 50px;
@@ -713,7 +713,7 @@
 }
 
 .carousel__button:hover {
-  background: var(--color-bg);
+  background: var(--color-primary-hover);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-50%) scale(1.1);
 }
@@ -853,7 +853,7 @@
 
 .gift-tag {
   display: inline-block;
-  background: #fef2f2;
+  background: var(--color-bg-muted);
   color: var(--color-discount);
   font-size: 11px;
   padding: var(--space-xs) var(--space-sm);
@@ -2207,6 +2207,7 @@
 
   .categories-card img {
     height: 80px;
+    object-fit: contain;
   }
 
   .categories-card__name {
