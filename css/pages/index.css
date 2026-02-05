@@ -951,7 +951,7 @@
 
 .banner-content .sell,
 .banner-content .start {
-  color: var(--color-bg);
+  color: var(--color-text-white);
 }
 
 .banner-content .sell span {
