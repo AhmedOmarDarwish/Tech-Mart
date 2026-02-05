@@ -1304,6 +1304,42 @@ body {
   color: #555;
 }
 
+/* =========================
+   DESKTOP FIX (>= 992px)
+========================= */
+
+@media (min-width: 992px) {
+
+  /* filters sidebar */
+  .shop-sidebar__container {
+    max-height: none;
+    height: auto;
+    overflow: visible;
+    position: static;
+    transform: none;
+  }
+
+  /* categories sidebar */
+  .product__dashboard-sidebar {
+    max-height: none;
+    height: auto;
+    overflow: visible;
+    position: static;
+    transform: none;
+  }
+
+  /* إخفاء أزرار التوجل */
+  .sidebar-toggle {
+    display: none !important;
+  }
+
+  /* إخفاء overlay */
+  .sidebar-overlay {
+    display: none !important;
+  }
+}
+
+
 /* ========================================
    RESPONSIVE MEDIA QUERIES
    ======================================== */
