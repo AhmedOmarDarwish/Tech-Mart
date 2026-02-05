@@ -176,11 +176,18 @@
       </div>
       <div class="page">
         <div class="best-seller__categories">
-          <section class="product__dashboard-categories">
+          <section class="product__dashboard-categories sidebar sidebar--categories">
+            <button
+              class="sidebar-toggle sidebar-toggle--categories"
+              data-sidebar="categories"
+            >
+              <i class="fa fa-list"></i>
+            </button>
             <aside class="product__dashboard-sidebar">
               <h3 class="categories__title">Categories</h3>
               <div class="categories-links"></div>
             </aside>
+            <div class="sidebar-overlay sidebar-overlay--categories"></div>
           </section>
           <section class="product__best-seller">
             <h1 class="product__title">BEST SELLER IN THIS CATEGORIES</h1>
@@ -199,7 +206,13 @@
           </section>
         </div>
         <section class="fullcategory">
-          <section class="shop-sidebar">
+          <section class="shop-sidebar sidebar--filters">
+            <button
+              class="sidebar-toggle sidebar-toggle--filters"
+              data-sidebar="filter"
+            >
+              <i class="fa fa-filter"></i>
+            </button>
             <aside class="shop-sidebar__container">
               <div class="shop-sidebar__top">
                 <div class="shop-sidebar__top-header">
@@ -369,6 +382,7 @@
                 </div>
               </div> -->
             </aside>
+            <div class="sidebar-overlay  sidebar-overlay--filters"></div>
           </section>
 
           <section class="product__filter">
