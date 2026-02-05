@@ -30,7 +30,6 @@
 
 .categories-links a:hover {
   color: var(--color-primary);
-
 }
 
 .category {
@@ -232,8 +231,6 @@
   gap: var(--space-md);
 }
 
-
-
 .dashboard__card {
   display: grid;
   border-radius: 12px;
@@ -269,13 +266,11 @@
 .dashboard__right {
   display: grid;
   gap: var(--space-md);
-
 }
 
 .dashboard__right img {
   object-fit: cover;
   border-radius: 10px;
-
 }
 
 .dashboard__card--light {
@@ -314,9 +309,9 @@
 }
 
 .dashboard__content a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    font-weight: bolder;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-weight: bolder;
 }
 
 .dashboard__card--right .dashboard__content {
@@ -345,8 +340,6 @@
   font-size: var(--font-size-xl);
   font-weight: 700;
 }
-
-
 
 /* Section Container */
 .featured-section {
@@ -423,7 +416,9 @@
   display: block;
   padding: var(--space-sm);
   border-radius: var(--radius-md);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
   aspect-ratio: 2 / 1;
 }
 
@@ -596,8 +591,6 @@
   color: var(--color-text-muted);
 }
 
-
-
 /* ===== UTILITY CLASSES ===== */
 .visually-hidden {
   position: absolute;
@@ -621,12 +614,6 @@
   background-color: var(--color-bg-muted);
   border-radius: var(--radius-lg);
 }
-
-
-
-
-
-
 
 /* ------------------------------------------------------------ */
 .container__setproducts {
@@ -742,8 +729,6 @@
 .carousel__button--prev {
   right: 10px;
 }
-
-
 
 .product-card__image-container {
   border-radius: var(--radius-lg);
@@ -1413,21 +1398,21 @@
 }
 
 .featured-product--AUDIOS {
-  background-image: url('/assets/images/banners/main-category/main-category-Audios.svg');
+  background-image: url("/assets/images/banners/main-category/main-category-Audios.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .featured-product--GAMING {
-  background-image: url('/assets/images/banners/main-category/main-category-Gaming.svg');
+  background-image: url("/assets/images/banners/main-category/main-category-Gaming.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .featured-product--OFFICE {
-  background-image: url('/assets/images/banners/main-category/main-category-official.svg');
+  background-image: url("/assets/images/banners/main-category/main-category-official.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1502,7 +1487,11 @@
 
 /* ===== MAIN DEALS CARD ===== */
 .deals-main {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-hover) 100%
+  );
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
@@ -1760,7 +1749,11 @@
 
 .progress-bar__fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-primary-hover) 100%
+  );
   border-radius: 10px;
   transition: width 0.3s ease;
 }
@@ -1811,7 +1804,9 @@
 }
 
 .promo-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* ========================================
@@ -1853,21 +1848,20 @@
     bottom: 20px;
   }
 
- .slider__dot {
-   width: 5px !important;
-   height: 5px !important;
-   min-width: 5px !important;
-   min-height: 5px !important;
-   max-width: 5px !important;
-   max-height: 5px !important;
- }
+  .slider__dot {
+    width: 5px !important;
+    height: 5px !important;
+    min-width: 5px !important;
+    min-height: 5px !important;
+    max-width: 5px !important;
+    max-height: 5px !important;
+  }
 
- .slider__dot--active {
-   width: 15px !important;
-   min-width: 15px !important;
-   max-width: 15px !important;
- }
- 
+  .slider__dot--active {
+    width: 15px !important;
+    min-width: 15px !important;
+    max-width: 15px !important;
+  }
 
   .brand-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1952,20 +1946,20 @@
     gap: 2.5px;
   }
 
-    .slider__dot {
-      width: 4px !important;
-      height: 4px !important;
-      min-width: 4px !important;
-      min-height: 4px !important;
-      max-width: 4px !important;
-      max-height: 4px !important;
-    }
-  
-    .slider__dot--active {
-      width: 12px !important;
-      min-width: 12px !important;
-      max-width: 12px !important;
-    }
+  .slider__dot {
+    width: 4px !important;
+    height: 4px !important;
+    min-width: 4px !important;
+    min-height: 4px !important;
+    max-width: 4px !important;
+    max-height: 4px !important;
+  }
+
+  .slider__dot--active {
+    width: 12px !important;
+    min-width: 12px !important;
+    max-width: 12px !important;
+  }
 
   .dashboard__main-row--bottom {
     grid-template-columns: 1fr;
@@ -2098,7 +2092,7 @@
   }
 
   .dashboard__sidebar {
-   display: none;
+    display: none;
   }
 
   .categories-links {
@@ -2134,8 +2128,12 @@
   }
 
   .slider__btn {
-    padding: 10px 20px;
+    padding: 15px 20px;
     font-size: 0.85rem;
+  }
+
+  .dashboard__btn {
+    padding: 15px 16px;
   }
 
   .slider__arrow {
@@ -2149,20 +2147,20 @@
     gap: 2px;
   }
 
-    .slider__dot {
-      width: 3px !important;
-      height: 3px !important;
-      min-width: 3px !important;
-      min-height: 3px !important;
-      max-width: 3px !important;
-      max-height: 3px !important;
-    }
-  
-    .slider__dot--active {
-      width: 9px !important;
-      min-width: 9px !important;
-      max-width: 9px !important;
-    }
+  .slider__dot {
+    width: 3px !important;
+    height: 3px !important;
+    min-width: 3px !important;
+    min-height: 3px !important;
+    max-width: 3px !important;
+    max-height: 3px !important;
+  }
+
+  .slider__dot--active {
+    width: 9px !important;
+    min-width: 9px !important;
+    max-width: 9px !important;
+  }
 
   .slider__dot:hover:not(.slider__dot--active) {
     transform: scale(1.1);
