@@ -411,6 +411,7 @@ footer {
         flex: 1 1 100%;
         min-width: auto;
         width: 100%;
+        display: none;
     }
 
     .footer__section--company {
