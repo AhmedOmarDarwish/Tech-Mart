@@ -2553,3 +2553,78 @@ padding: 12px 24px;
     flex-direction: column;
   }
 }
+.sidebar-toggle {
+  display: none;
+}
+
+/* موبايل + تابلت */
+@media (max-width: 991px) {
+  /* ===== Sidebar ===== */
+  .dashboard__sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 260px;
+    height: 100vh;
+
+    background: var(--color-bg);
+    z-index: 1000;
+    transition: left 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard__sidebar.active {
+    left: 0;
+  }
+
+  /* محتوى الكاتيجوري Scroll */
+  .categories-links {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  /* ===== زر الفلتر ===== */
+  .sidebar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+
+    background: var(--color-primary);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    z-index: 1100;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  }
+
+  .sidebar-toggle i {
+    font-size: 20px;
+    color: #fff;
+  }
+  /* ===== Overlay ===== */
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 900;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+
+  .sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

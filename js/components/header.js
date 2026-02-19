@@ -100,6 +100,15 @@ export const initHeader = async () => {
       localStorage.setItem("theme", next);
     });
   }
+  const menuBtn = document.querySelector(".mobile-menu-toggle");
+  const nav = document.querySelector(".header__nav");
+
+  if (menuBtn && nav) {
+    menuBtn.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  }
+
 
   await initSearch();
   setActiveNav();
@@ -295,3 +304,21 @@ async function renderSubcategories(selector) {
     console.error("Error loading subcategories:", error);
   }
 }
+
+// header navbar toggler
+
+// export const initHeader = async () => {
+//   // … كل الكود اللي عندك زي ما هو
+
+//   // ===== MOBILE NAV TOGGLE =====
+//   const menuBtn = document.querySelector(".mobile-menu-toggle");
+//   const nav = document.querySelector(".header__nav");
+
+//   if (menuBtn && nav) {
+//     menuBtn.addEventListener("click", () => {
+//       nav.classList.toggle("active");
+//     });
+//   }
+
+//   setActiveNav();
+// };

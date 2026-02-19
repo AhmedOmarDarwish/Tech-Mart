@@ -550,3 +550,22 @@ function setupProgressBar() {
     console.log("✓ Progress bar animated to:", targetWidth);
   }, 500);
 }
+const toggleBtn = document.querySelector('.sidebar-toggle');
+  const sidebar = document.querySelector('.dashboard__sidebar');
+  const overlay = document.querySelector('.sidebar-overlay');
+
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+
+    toggleBtn.innerHTML = sidebar.classList.contains('active')
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-filter"></i>';
+  });
+
+  overlay.addEventListener('click', closeSidebar);
