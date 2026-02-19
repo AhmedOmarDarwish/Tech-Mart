@@ -40,7 +40,9 @@
           <span>TECH MART</span>
         </div>
       </div></a> 
-
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <nav class="header__nav">
         <ul>
           <li><a href="../../index.html" class="">Home</a></li>
@@ -132,4 +134,34 @@
     </div>
   </div>
 </header>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.querySelector(".mobile-menu-toggle");
+    const nav = document.querySelector(".header__nav");
+    const icon = toggleBtn.querySelector("i");
+
+    if (!toggleBtn || !nav || !icon) return;
+
+    toggleBtn.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      toggleBtn.classList.toggle("active");
+
+      if (icon.classList.contains("fa-bars")) {
+        icon.classList.replace("fa-bars", "fa-xmark");
+      } else {
+        icon.classList.replace("fa-xmark", "fa-bars");
+      }
+    });
+
+    document.querySelectorAll(".header__nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+        toggleBtn.classList.remove("active");
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      });
+    });
+  });
+</script>
+
 <!-- End header main -->
